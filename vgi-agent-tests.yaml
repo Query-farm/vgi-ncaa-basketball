@@ -1,0 +1,102 @@
+# Private grader sidecar for vgi.agent_test_tasks. Every task grades through
+# check_sql (a boolean assertion over pinned facts) rather than reference_sql,
+# the catalog serves live data, so an exact result-set compare cannot pass.
+tasks:
+  - name: ap_top_five_conference_records
+    check_sql: >-
+      SELECT count(*) = 5 AS ok
+      FROM ncaa_basketball.mens.current_rankings r
+      JOIN ncaa_basketball.mens.current_standings s USING (team_id)
+      WHERE r.poll_id = 1 AND r.rank <= 5
+    success_criteria: >-
+      Joins current_rankings (poll_id 1, rank <= 5) to current_standings on team_id and
+      reports conference_name with conference_wins and conference_losses.
+
+  - name: big_ten_final_standings
+    check_sql: >-
+      SELECT count(*) = 18
+        AND (SELECT count(*) FROM ncaa_basketball.mens.conferences WHERE short_name = 'Big Ten') = 1 AS ok
+      FROM ncaa_basketball.mens.standings(season := 2026, conference := 'Big Ten')
+    success_criteria: >-
+      Uses standings with season 2026 (the season is labelled by its end year) and the Big Ten
+      conference, ordered by conference_seed.
+
+  - name: womens_2026_champion
+    check_sql: >-
+      SELECT bool_and(winner = 'UCLA' AND bottom_score = 79 AND top_score = 51)
+        AND (SELECT count(*) FROM ncaa_basketball.womens.net_rankings WHERE school = 'UCLA') = 1 AS ok
+      FROM ncaa_basketball.womens.bracket(2026)
+      WHERE round_number = 7
+    success_criteria: >-
+      Reports UCLA beating South Carolina 79-51 from bracket(2026) round 7 and looks UCLA up in
+      net_rankings.
+
+  - name: mens_scoring_leaders_2026
+    check_sql: >-
+      SELECT count(*) = 10 AS ok FROM (
+        SELECT p.player_id
+        FROM ncaa_basketball.mens.player_stats(season := 2026) p
+        JOIN ncaa_basketball.mens.teams t USING (team_id)
+        WHERE p.games_played >= 20
+        ORDER BY p.points_per_game DESC
+        LIMIT 10
+      )
+    success_criteria: >-
+      Uses player_stats with season 2026, filters games_played >= 20, orders by points_per_game,
+      and joins teams for the conference.
+
+  - name: pinned_game_scoring
+    check_sql: >-
+      SELECT (SELECT sum(points) FROM ncaa_basketball.mens.box_score(401920686) WHERE team_id = 41)
+           = (SELECT points FROM ncaa_basketball.mens.team_box_score(401920686) WHERE team_id = 41)
+        AND (SELECT count(*) FROM ncaa_basketball.mens.play_by_play(401920686)
+             WHERE scoring_play AND team_id = 41) > 0 AS ok
+    success_criteria: >-
+      Uses box_score for the top UConn scorer, team_box_score for the 83-point total, and
+      play_by_play filtered to UConn scoring plays.
+
+  - name: duke_season_and_roster
+    check_sql: >-
+      SELECT count(*) FILTER (WHERE (home_team_id = 150 AND home_winner) OR (away_team_id = 150 AND away_winner)) = 35
+        AND (SELECT count(*) FROM ncaa_basketball.mens.team_roster(150)) > 0
+        AND (SELECT count(*) FROM ncaa_basketball.mens.teams WHERE team_id = 150) = 1 AS ok
+      FROM ncaa_basketball.mens.team_schedule(150, season := 2026)
+    success_criteria: >-
+      Finds Duke's team_id (150) in teams, counts 35 wins from team_schedule for season 2026, and
+      counts the current team_roster.
+
+  - name: official_vs_espn_ppg_leader
+    check_sql: >-
+      SELECT (SELECT stat_id FROM ncaa_basketball.mens.stat_categories
+              WHERE category = 'individual' AND name = 'Points Per Game') = 136
+        AND (SELECT count(*) FROM ncaa_basketball.mens.stat_leaders(136) WHERE rank = 1) >= 1
+        AND (SELECT count(*) FROM ncaa_basketball.mens.current_player_stats) > 0 AS ok
+    success_criteria: >-
+      Looks up the Points Per Game id (136) in stat_categories, takes the rank-1 player from
+      stat_leaders, then finds the same player by name in current_player_stats.
+
+  - name: womens_week5_poll_finish
+    check_sql: >-
+      SELECT count(*) = 5 AS ok
+      FROM ncaa_basketball.womens.rankings(2026, 5) r
+      JOIN ncaa_basketball.womens.standings(season := 2026) s USING (team_id)
+      WHERE r.rank <= 5
+    success_criteria: >-
+      Uses rankings(2026, 5) and joins standings for season 2026 on team_id for conference records.
+
+  - name: ranked_games_on_date
+    check_sql: >-
+      SELECT count(*) = 1 AS ok
+      FROM ncaa_basketball.mens.scoreboard(DATE '2026-11-09')
+      WHERE event_id = 401920686 AND home_score = 83 AND away_score = 41
+    success_criteria: >-
+      Uses scoreboard for 2026-11-09 and filters home_rank or away_rank IS NOT NULL.
+
+  - name: womens_ranked_teams_today
+    check_sql: >-
+      SELECT (SELECT count(*) FROM ncaa_basketball.womens.current_rankings
+              WHERE poll_id = 1 AND rank IS NOT NULL) = 25
+        AND (SELECT count(*) >= 0 FROM ncaa_basketball.womens.current_scoreboard) AS ok
+    success_criteria: >-
+      Joins current_scoreboard home_team_id or away_team_id to current_rankings team_id for ranked
+      AP rows; an empty slate is a valid answer on days without games.

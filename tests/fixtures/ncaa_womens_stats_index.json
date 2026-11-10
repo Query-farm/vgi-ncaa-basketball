@@ -1,0 +1,62 @@
+{
+ "sport": "Women's Basketball",
+ "individual": [
+  {
+   "id": "471",
+   "name": "Assist/Turnover Ratio",
+   "path": "individual/471"
+  },
+  {
+   "id": "1009",
+   "name": "Assists",
+   "path": "individual/1009"
+  },
+  {
+   "id": "106",
+   "name": "Assists Per Game",
+   "path": "individual/106"
+  },
+  {
+   "id": "1011",
+   "name": "Blocks",
+   "path": "individual/1011"
+  },
+  {
+   "id": "104",
+   "name": "Blocks Per Game",
+   "path": "individual/104"
+  },
+  {
+   "id": "554",
+   "name": "Double Doubles",
+   "path": "individual/554"
+  },
+  {
+   "id": "102",
+   "name": "Points Per Game",
+   "path": "individual/102"
+  }
+ ],
+ "team": [
+  {
+   "id": "472",
+   "name": "Assist/Turnover Ratio",
+   "path": "team/472"
+  },
+  {
+   "id": "220",
+   "name": "Assists Per Game",
+   "path": "team/220"
+  },
+  {
+   "id": "1292",
+   "name": "Bench Points Per Game",
+   "path": "team/1292"
+  },
+  {
+   "id": "111",
+   "name": "Scoring Offense",
+   "path": "team/111"
+  }
+ ]
+}

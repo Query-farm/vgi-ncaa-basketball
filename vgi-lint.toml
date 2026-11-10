@@ -1,0 +1,123 @@
+location = "uv run --project . vgi-ncaa-basketball"
+select = ["ALL"]
+fail_on = "warning"
+
+ignore = [
+  { code = "VGI311", kind = "tooling-bug", reason = """\
+Each parameterless all_* scan is exposed as its corresponding table (all_current_standings \
+backs current_standings, all_teams backs teams, and so on). The rule only recognizes matching \
+names, but a function and a table cannot share a name inside one schema; the deliberate all_* \
+names avoid that collision.\
+""" },
+]
+
+# The all_* functions are the scans behind the ordinary tables. Agent tasks exercise the
+# public tables instead; teaching agents to call implementation functions directly would
+# undermine the table abstraction. The hermetic Haybarn E2E test executes every table (and
+# therefore every backing scan) in both schemas.
+
+[per_object."ncaa_basketball.mens.all_conferences"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.conferences; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_current_player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.current_player_stats; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_current_rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.current_rankings; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_current_scoreboard"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.current_scoreboard; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_current_standings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.current_standings; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_net_rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.net_rankings; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_teams"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.teams; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_conferences"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.conferences; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_current_player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.current_player_stats; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_current_rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.current_rankings; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_current_scoreboard"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.current_scoreboard; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_current_standings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.current_standings; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_net_rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.net_rankings; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_teams"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.teams; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.mens.all_stat_categories"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for mens.stat_categories; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+[per_object."ncaa_basketball.womens.all_stat_categories"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Backing scan for womens.stat_categories; agent tasks and the hermetic E2E test exercise it through that table." }]
+
+# The mens and womens schemas are generated from one implementation per function
+# (functions.build_functions binds only the ESPN league slug and ncaa-api sport).
+# The agent suite stays within 10 tasks by exercising each function shape once, in
+# whichever schema makes the more natural question; the twin below is the identical
+# code path over the other league. Unit tests parse fixtures for both leagues and
+# the hermetic E2E test queries every table in both schemas.
+
+[per_object."ncaa_basketball.mens.bracket"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.womens.bracket, which agent task womens_2026_champion exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.mens.current_scoreboard"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.womens.current_scoreboard, which agent task womens_ranked_teams_today exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.mens.net_rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.womens.net_rankings, which agent task womens_2026_champion exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.mens.rankings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.womens.rankings, which agent task womens_week5_poll_finish exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.box_score"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.box_score, which agent task pinned_game_scoring exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.conferences"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.conferences, which agent task big_ten_final_standings exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.current_player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.current_player_stats, which agent task official_vs_espn_ppg_leader exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.current_standings"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.current_standings, which agent task ap_top_five_conference_records exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.play_by_play"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.play_by_play, which agent task pinned_game_scoring exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.player_stats"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.player_stats, which agent task mens_scoring_leaders_2026 exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.scoreboard"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.scoreboard, which agent task ranked_games_on_date exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.stat_leaders"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.stat_leaders, which agent task official_vs_espn_ppg_leader exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.team_box_score"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.team_box_score, which agent task pinned_game_scoring exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.team_roster"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.team_roster, which agent task duke_season_and_roster exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.team_schedule"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.team_schedule, which agent task duke_season_and_roster exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.teams"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.teams, which agent task duke_season_and_roster exercises; only the upstream league differs." }]
+
+[per_object."ncaa_basketball.womens.stat_categories"]
+ignore = [{ code = "VGI520", kind = "domain-exemption", reason = "Same implementation as ncaa_basketball.mens.stat_categories, which agent task official_vs_espn_ppg_leader exercises; only the upstream league differs." }]

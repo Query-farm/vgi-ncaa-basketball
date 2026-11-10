@@ -1,0 +1,415 @@
+{
+ "championships": [
+  {
+   "__typename": "Championship",
+   "title": "2026 DI Men's Basketball Championship",
+   "year": 2026,
+   "dataPath": "/carmen/brackets/championships/basketball-men/d1/2026",
+   "bracketTemplate": "bracket_68.json",
+   "season": 2025,
+   "sportUrl": "basketball-men",
+   "championshipId": 6393,
+   "divisionName": "d1",
+   "games": [
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534656,
+     "bracketPositionId": 601,
+     "bracketId": 601,
+     "victorGamePosition": "Top",
+     "victorBracketPositionId": 701,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "04/04/2026",
+     "startTime": "18:09",
+     "startTimeEpoch": 1775340540,
+     "sectionId": 6,
+     "title": "Illinois vs UConn",
+     "url": "/game/6534656",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": true,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/u/uconn.70.png",
+       "score": 71,
+       "seed": 2,
+       "nameShort": "UConn",
+       "nameFull": "University of Connecticut",
+       "seoname": "uconn",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": false,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/i/illinois.70.png",
+       "score": 62,
+       "seed": 3,
+       "nameShort": "Illinois",
+       "nameFull": "University of Illinois Urbana-Champaign",
+       "seoname": "illinois",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "TBS"
+     }
+    },
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534657,
+     "bracketPositionId": 602,
+     "bracketId": 602,
+     "victorGamePosition": "Bottom",
+     "victorBracketPositionId": 701,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "04/04/2026",
+     "startTime": "21:19",
+     "startTimeEpoch": 1775351940,
+     "sectionId": 6,
+     "title": "Michigan vs Arizona",
+     "url": "/game/6534657",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": true,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/a/arizona.70.png",
+       "score": 73,
+       "seed": 1,
+       "nameShort": "Arizona",
+       "nameFull": "University of Arizona",
+       "seoname": "arizona",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": false,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/m/michigan.70.png",
+       "score": 91,
+       "seed": 1,
+       "nameShort": "Michigan",
+       "nameFull": "University of Michigan",
+       "seoname": "michigan",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "TBS"
+     }
+    },
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534658,
+     "bracketPositionId": 701,
+     "bracketId": 701,
+     "victorGamePosition": null,
+     "victorBracketPositionId": null,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "04/06/2026",
+     "startTime": "20:50",
+     "startTimeEpoch": 1775523000,
+     "sectionId": 6,
+     "title": "UConn vs Michigan",
+     "url": "/game/6534658",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": true,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/u/uconn.70.png",
+       "score": 63,
+       "seed": 2,
+       "nameShort": "UConn",
+       "nameFull": "University of Connecticut",
+       "seoname": "uconn",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": false,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/m/michigan.70.png",
+       "score": 69,
+       "seed": 1,
+       "nameShort": "Michigan",
+       "nameFull": "University of Michigan",
+       "seoname": "michigan",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "TBS"
+     }
+    },
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534592,
+     "bracketPositionId": 101,
+     "bracketId": 101,
+     "victorGamePosition": "Bottom",
+     "victorBracketPositionId": 225,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "03/17/2026",
+     "startTime": "18:40",
+     "startTimeEpoch": 1773787200,
+     "sectionId": 1,
+     "title": "UMBC vs Howard",
+     "url": "/game/6534592",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": true,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/u/umbc.70.png",
+       "score": 83,
+       "seed": 16,
+       "nameShort": "UMBC",
+       "nameFull": "University of Maryland, Baltimore County",
+       "seoname": "umbc",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": false,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/h/howard.70.png",
+       "score": 86,
+       "seed": 16,
+       "nameShort": "Howard",
+       "nameFull": "Howard University",
+       "seoname": "howard",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "truTV"
+     }
+    }
+   ],
+   "rounds": [
+    {
+     "__typename": "Round",
+     "id": "8691",
+     "roundNumber": 1,
+     "label": "DAYTON",
+     "staged": true,
+     "subtitle": "3/17-3/18",
+     "title": "First Four&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8692",
+     "roundNumber": 2,
+     "label": "FIRST ROUND",
+     "staged": true,
+     "subtitle": "3/19-3/20",
+     "title": "First Round"
+    },
+    {
+     "__typename": "Round",
+     "id": "8693",
+     "roundNumber": 3,
+     "label": "SECOND ROUND",
+     "staged": true,
+     "subtitle": "3/21-3/22",
+     "title": "Second Round"
+    },
+    {
+     "__typename": "Round",
+     "id": "8694",
+     "roundNumber": 4,
+     "label": "SWEET 16",
+     "staged": true,
+     "subtitle": "3/26-3/27",
+     "title": "Sweet 16&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8695",
+     "roundNumber": 5,
+     "label": "ELITE EIGHT",
+     "staged": true,
+     "subtitle": "3/28-3/29",
+     "title": "Elite Eight&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8696",
+     "roundNumber": 6,
+     "label": "FINAL FOUR",
+     "staged": true,
+     "subtitle": "4/4",
+     "title": "FINAL FOUR&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8697",
+     "roundNumber": 7,
+     "label": "FINAL FOUR",
+     "staged": true,
+     "subtitle": "4/6",
+     "title": "Championship"
+    }
+   ],
+   "regions": [
+    {
+     "__typename": "RegionSection",
+     "id": "4030",
+     "abbreviation": "",
+     "title": "",
+     "subtitle": "",
+     "sectionId": 1,
+     "regionCode": "TT"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4031",
+     "abbreviation": " E",
+     "title": " EAST",
+     "subtitle": "",
+     "sectionId": 2,
+     "regionCode": "TL"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4032",
+     "abbreviation": " W",
+     "title": "WEST",
+     "subtitle": "",
+     "sectionId": 3,
+     "regionCode": "TR"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4033",
+     "abbreviation": " S",
+     "title": " SOUTH",
+     "subtitle": "",
+     "sectionId": 4,
+     "regionCode": "BL"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4034",
+     "abbreviation": "MW ",
+     "title": " MIDWEST",
+     "subtitle": "",
+     "sectionId": 5,
+     "regionCode": "BR"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4035",
+     "abbreviation": "",
+     "title": "",
+     "subtitle": "",
+     "sectionId": 6,
+     "regionCode": "CC"
+    }
+   ],
+   "sections": []
+  }
+ ]
+}

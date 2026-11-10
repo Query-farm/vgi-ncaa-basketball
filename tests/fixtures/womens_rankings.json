@@ -1,0 +1,226 @@
+{
+ "rankings": [
+  {
+   "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/womens-college-basketball/seasons/2027/types/2/weeks/2/rankings/1?lang=en&region=us",
+   "id": "1",
+   "name": "AP Top 25",
+   "shortName": "AP Poll",
+   "type": "ap",
+   "occurrence": {
+    "number": 2,
+    "type": "week",
+    "last": false,
+    "value": "2",
+    "displayValue": "Week 2"
+   },
+   "date": "2026-11-09T08:00Z",
+   "headline": "2027 NCAA Basketball Rankings - AP Top 25 Week 2",
+   "shortHeadline": "2027 : Week 2",
+   "season": {
+    "year": 2027,
+    "startDate": "2026-07-13T07:00Z",
+    "endDate": "2027-04-07T06:59Z",
+    "displayName": "2026-27",
+    "type": {
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg"
+    },
+    "powerIndexes": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/womens-college-basketball/seasons/2027/powerindex?lang=en&region=us"
+    },
+    "powerIndexLeaders": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/womens-college-basketball/seasons/2027/powerindex/leaders?lang=en&region=us"
+    },
+    "athletes": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/womens-college-basketball/seasons/2027/athletes?lang=en&region=us"
+    },
+    "leaders": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/womens-college-basketball/seasons/2027/types/2/leaders?lang=en&region=us"
+    }
+   },
+   "lastUpdated": "2026-11-09T20:19Z",
+   "ranks": [
+    {
+     "current": 1,
+     "previous": 1,
+     "points": 823.0,
+     "firstPlaceVotes": 32,
+     "trend": "-",
+     "team": {
+      "id": "2579",
+      "location": "South Carolina",
+      "name": "Gamecocks",
+      "nickname": "South Carolina",
+      "abbreviation": "SC",
+      "color": "73000a",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 2,
+     "previous": 5,
+     "points": 777.0,
+     "firstPlaceVotes": 0,
+     "trend": "+3",
+     "team": {
+      "id": "130",
+      "location": "Michigan",
+      "name": "Wolverines",
+      "nickname": "Michigan",
+      "abbreviation": "MICH",
+      "color": "00274c",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 3,
+     "previous": 3,
+     "points": 734.0,
+     "firstPlaceVotes": 1,
+     "trend": "-",
+     "team": {
+      "id": "30",
+      "location": "USC",
+      "name": "Trojans",
+      "nickname": "USC",
+      "abbreviation": "USC",
+      "color": "9d2235",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 4,
+     "previous": 2,
+     "points": 733.0,
+     "firstPlaceVotes": 0,
+     "trend": "-2",
+     "team": {
+      "id": "41",
+      "location": "UConn",
+      "name": "Huskies",
+      "nickname": "UConn",
+      "abbreviation": "CONN",
+      "color": "0c2340",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "2-1"
+    },
+    {
+     "current": 5,
+     "previous": 4,
+     "points": 681.0,
+     "firstPlaceVotes": 0,
+     "trend": "-1",
+     "team": {
+      "id": "150",
+      "location": "Duke",
+      "name": "Blue Devils",
+      "nickname": "Duke",
+      "abbreviation": "DUKE",
+      "color": "00539b",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "2-0"
+    }
+   ],
+   "others": [
+    {
+     "current": 0,
+     "previous": 0,
+     "points": 39.0,
+     "firstPlaceVotes": 0,
+     "trend": "+26",
+     "team": {
+      "id": "239",
+      "location": "Baylor",
+      "name": "Bears",
+      "nickname": "Baylor",
+      "abbreviation": "BAY",
+      "color": "154734",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "0-0"
+    },
+    {
+     "current": 0,
+     "previous": 25,
+     "points": 35.0,
+     "firstPlaceVotes": 0,
+     "trend": "+25",
+     "team": {
+      "id": "152",
+      "location": "NC State",
+      "name": "Wolfpack",
+      "nickname": "NC State",
+      "abbreviation": "NCSU",
+      "color": "cc0000",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "0-0"
+    }
+   ],
+   "droppedOut": [
+    {
+     "current": 0,
+     "previous": 25,
+     "points": 35.0,
+     "firstPlaceVotes": 0,
+     "trend": "+25",
+     "team": {
+      "id": "152",
+      "location": "NC State",
+      "name": "Wolfpack",
+      "nickname": "NC State",
+      "abbreviation": "NCSU",
+      "color": "cc0000",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T20:19Z",
+     "recordSummary": "0-0"
+    }
+   ],
+   "availability": {},
+   "firstOccurrence": {
+    "type": "week",
+    "value": "1"
+   }
+  }
+ ],
+ "latestSeason": {
+  "year": 2027,
+  "startDate": "2026-07-13T07:00Z",
+  "endDate": "2027-04-07T06:59Z",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "abbreviation": "reg"
+  }
+ },
+ "latestWeek": {
+  "number": 2,
+  "type": "week",
+  "last": false,
+  "value": "2",
+  "displayValue": "Week 2"
+ }
+}

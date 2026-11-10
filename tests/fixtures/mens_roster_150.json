@@ -1,0 +1,187 @@
+{
+ "timestamp": "2026-11-10T17:24:03Z",
+ "status": "success",
+ "season": {
+  "year": 2026,
+  "displayName": "2025-26",
+  "type": 3,
+  "name": "Postseason"
+ },
+ "athletes": [
+  {
+   "id": "5041937",
+   "firstName": "Cayden",
+   "lastName": "Boozer",
+   "fullName": "Cayden Boozer",
+   "displayName": "Cayden Boozer",
+   "shortName": "C. Boozer",
+   "weight": 195.0,
+   "displayWeight": "195 lbs",
+   "height": 76.0,
+   "displayHeight": "6' 4\"",
+   "birthPlace": {
+    "city": "Miami",
+    "state": "FL",
+    "country": "USA",
+    "displayText": "Miami, FL"
+   },
+   "birthCountry": {
+    "alternateId": "1",
+    "abbreviation": "USA"
+   },
+   "slug": "cayden-boozer",
+   "jersey": "2",
+   "hand": {
+    "type": "RIGHT",
+    "abbreviation": "R",
+    "displayValue": "Right"
+   },
+   "position": {
+    "id": "3",
+    "name": "Guard",
+    "displayName": "Guard",
+    "abbreviation": "G",
+    "leaf": false
+   },
+   "injuries": [],
+   "teams": [
+    {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/150?lang=en&region=us"
+    }
+   ],
+   "experience": {
+    "years": 2,
+    "displayValue": "Sophomore",
+    "abbreviation": "SO"
+   },
+   "status": {
+    "id": "1",
+    "name": "Active",
+    "type": "active",
+    "abbreviation": "Active"
+   }
+  },
+  {
+   "id": "5341547",
+   "firstName": "Brock",
+   "lastName": "Davis",
+   "fullName": "Brock Davis",
+   "displayName": "Brock Davis",
+   "shortName": "B. Davis",
+   "weight": 195.0,
+   "displayWeight": "195 lbs",
+   "height": 77.0,
+   "displayHeight": "6' 5\"",
+   "birthPlace": {
+    "city": "Washington",
+    "state": "DC",
+    "country": "USA",
+    "displayText": "Washington, DC"
+   },
+   "birthCountry": {
+    "alternateId": "1",
+    "abbreviation": "USA"
+   },
+   "slug": "brock-davis",
+   "jersey": "50",
+   "position": {
+    "id": "3",
+    "name": "Guard",
+    "displayName": "Guard",
+    "abbreviation": "G",
+    "leaf": false
+   },
+   "injuries": [],
+   "teams": [
+    {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/150?lang=en&region=us"
+    }
+   ],
+   "experience": {
+    "years": 4,
+    "displayValue": "Senior",
+    "abbreviation": "SR"
+   },
+   "status": {
+    "id": "1",
+    "name": "Active",
+    "type": "active",
+    "abbreviation": "Active"
+   }
+  },
+  {
+   "id": "4711256",
+   "firstName": "Caleb",
+   "lastName": "Foster",
+   "fullName": "Caleb Foster",
+   "displayName": "Caleb Foster",
+   "shortName": "C. Foster",
+   "weight": 200.0,
+   "displayWeight": "200 lbs",
+   "height": 77.0,
+   "displayHeight": "6' 5\"",
+   "birthPlace": {
+    "city": "Harrisburg",
+    "state": "NC",
+    "country": "USA",
+    "displayText": "Harrisburg, NC"
+   },
+   "birthCountry": {
+    "alternateId": "1",
+    "abbreviation": "USA"
+   },
+   "slug": "caleb-foster",
+   "jersey": "1",
+   "hand": {
+    "type": "LEFT",
+    "abbreviation": "L",
+    "displayValue": "Left"
+   },
+   "position": {
+    "id": "3",
+    "name": "Guard",
+    "displayName": "Guard",
+    "abbreviation": "G",
+    "leaf": false
+   },
+   "injuries": [],
+   "teams": [
+    {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/150?lang=en&region=us"
+    }
+   ],
+   "experience": {
+    "years": 4,
+    "displayValue": "Senior",
+    "abbreviation": "SR"
+   },
+   "status": {
+    "id": "1",
+    "name": "Active",
+    "type": "active",
+    "abbreviation": "Active"
+   }
+  }
+ ],
+ "coach": [
+  {
+   "id": "31709",
+   "firstName": "Jon",
+   "lastName": "Scheyer",
+   "experience": 0
+  }
+ ],
+ "team": {
+  "id": "150",
+  "abbreviation": "DUKE",
+  "location": "Duke",
+  "name": "Blue Devils",
+  "displayName": "Duke Blue Devils",
+  "clubhouse": "https://www.espn.com/mens-college-basketball/team/_/id/150/duke-blue-devils",
+  "color": "00539b",
+  "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+  "recordSummary": "35-3",
+  "seasonSummary": "2025-26",
+  "standingSummary": "1st in ACC"
+ }
+}

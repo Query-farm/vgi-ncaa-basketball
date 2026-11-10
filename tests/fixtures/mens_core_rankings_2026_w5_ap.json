@@ -1,0 +1,427 @@
+{
+ "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/weeks/5/rankings/1?lang=en&region=us",
+ "id": "1",
+ "name": "AP Top 25",
+ "shortName": "AP Poll",
+ "type": "ap",
+ "occurrence": {
+  "number": 5,
+  "type": "week",
+  "last": false,
+  "value": "5",
+  "displayValue": "Week 5"
+ },
+ "date": "2025-12-01T08:00Z",
+ "headline": "2026 NCAA Basketball Rankings - AP Top 25 Week 5",
+ "shortHeadline": "2026 : Week 5",
+ "season": {
+  "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026?lang=en&region=us",
+  "year": 2026,
+  "startDate": "2025-07-01T07:00Z",
+  "endDate": "2026-04-08T06:59Z",
+  "displayName": "2025-26",
+  "type": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2?lang=en&region=us",
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "abbreviation": "reg",
+   "year": 2026,
+   "startDate": "2025-11-03T08:00Z",
+   "endDate": "2026-03-17T06:59Z",
+   "hasGroups": false,
+   "hasStandings": true,
+   "hasLegs": false,
+   "groups": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/groups?lang=en&region=us"
+   },
+   "weeks": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/weeks?lang=en&region=us"
+   },
+   "leaders": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/leaders?lang=en&region=us"
+   },
+   "slug": "regular-season"
+  },
+  "types": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types?lang=en&region=us",
+   "count": 4,
+   "pageIndex": 1,
+   "pageSize": 4,
+   "pageCount": 1,
+   "items": [
+    {
+     "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/1?lang=en&region=us",
+     "id": "1",
+     "type": 1,
+     "name": "Preseason",
+     "abbreviation": "pre",
+     "year": 2026,
+     "startDate": "2025-07-01T07:00Z",
+     "endDate": "2025-11-03T07:59Z",
+     "hasGroups": false,
+     "hasStandings": false,
+     "hasLegs": false,
+     "groups": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/1/groups?lang=en&region=us"
+     },
+     "weeks": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/1/weeks?lang=en&region=us"
+     },
+     "slug": "preseason"
+    },
+    {
+     "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2?lang=en&region=us",
+     "id": "2",
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg",
+     "year": 2026,
+     "startDate": "2025-11-03T08:00Z",
+     "endDate": "2026-03-17T06:59Z",
+     "hasGroups": false,
+     "hasStandings": true,
+     "hasLegs": false,
+     "groups": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/groups?lang=en&region=us"
+     },
+     "weeks": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/weeks?lang=en&region=us"
+     },
+     "leaders": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/leaders?lang=en&region=us"
+     },
+     "slug": "regular-season"
+    },
+    {
+     "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/3?lang=en&region=us",
+     "id": "3",
+     "type": 3,
+     "name": "Postseason",
+     "abbreviation": "post",
+     "year": 2026,
+     "startDate": "2026-03-17T07:00Z",
+     "endDate": "2026-04-08T06:59Z",
+     "hasGroups": false,
+     "hasStandings": true,
+     "hasLegs": false,
+     "groups": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/3/groups?lang=en&region=us"
+     },
+     "weeks": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/3/weeks?lang=en&region=us"
+     },
+     "slug": "post-season"
+    },
+    {
+     "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/4?lang=en&region=us",
+     "id": "4",
+     "type": 4,
+     "name": "Off Season",
+     "abbreviation": "off",
+     "year": 2026,
+     "startDate": "2026-04-08T07:00Z",
+     "endDate": "2026-07-13T06:59Z",
+     "hasGroups": false,
+     "hasStandings": false,
+     "hasLegs": false,
+     "groups": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/4/groups?lang=en&region=us"
+     },
+     "weeks": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/4/weeks?lang=en&region=us"
+     },
+     "slug": "off-season"
+    }
+   ]
+  },
+  "rankings": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/rankings?lang=en&region=us"
+  },
+  "powerIndexes": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/powerindex?lang=en&region=us"
+  },
+  "powerIndexLeaders": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/powerindex/leaders?lang=en&region=us"
+  },
+  "athletes": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/athletes?lang=en&region=us"
+  },
+  "awards": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/awards?lang=en&region=us"
+  },
+  "futures": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/futures?lang=en&region=us"
+  },
+  "leaders": {
+   "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/types/2/leaders?lang=en&region=us"
+  }
+ },
+ "lastUpdated": "2025-12-01T21:37Z",
+ "ranks": [
+  {
+   "current": 1,
+   "previous": 1,
+   "points": 1494.0,
+   "firstPlaceVotes": 40,
+   "trend": "-",
+   "record": {
+    "summary": "7-0",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 7.0,
+      "displayValue": "7"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 0.0,
+      "displayValue": "0"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/2509?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-01T21:37Z"
+  },
+  {
+   "current": 2,
+   "previous": 2,
+   "points": 1442.0,
+   "firstPlaceVotes": 6,
+   "trend": "-",
+   "record": {
+    "summary": "7-0",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 7.0,
+      "displayValue": "7"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 0.0,
+      "displayValue": "0"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/12?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-01T21:37Z"
+  },
+  {
+   "current": 3,
+   "previous": 7,
+   "points": 1417.0,
+   "firstPlaceVotes": 15,
+   "trend": "+4",
+   "record": {
+    "summary": "7-0",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 7.0,
+      "displayValue": "7"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 0.0,
+      "displayValue": "0"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/130?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-01T21:37Z"
+  },
+  {
+   "current": 4,
+   "previous": 4,
+   "points": 1355.0,
+   "firstPlaceVotes": 0,
+   "trend": "-",
+   "record": {
+    "summary": "8-0",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 8.0,
+      "displayValue": "8"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 0.0,
+      "displayValue": "0"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/150?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-01T21:37Z"
+  },
+  {
+   "current": 5,
+   "previous": 5,
+   "points": 1244.0,
+   "firstPlaceVotes": 0,
+   "trend": "-",
+   "record": {
+    "summary": "6-1",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 6.0,
+      "displayValue": "6"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 1.0,
+      "displayValue": "1"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/41?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-01T21:37Z"
+  }
+ ],
+ "others": [
+  {
+   "current": 0,
+   "previous": 0,
+   "points": 99.0,
+   "firstPlaceVotes": 0,
+   "trend": "+26",
+   "record": {
+    "summary": "0-0",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 0.0,
+      "displayValue": "0"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 0.0,
+      "displayValue": "0"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/2294?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-02T09:35Z"
+  }
+ ],
+ "droppedOut": [
+  {
+   "current": 0,
+   "previous": 18,
+   "points": 59.0,
+   "firstPlaceVotes": 0,
+   "trend": "+18",
+   "record": {
+    "summary": "0-0",
+    "stats": [
+     {
+      "name": "wins",
+      "displayName": "Wins",
+      "shortDisplayName": "W",
+      "description": "Wins",
+      "abbreviation": "W",
+      "type": "wins",
+      "value": 0.0,
+      "displayValue": "0"
+     },
+     {
+      "name": "losses",
+      "displayName": "Losses",
+      "shortDisplayName": "L",
+      "description": "Losses",
+      "abbreviation": "L",
+      "type": "losses",
+      "value": 0.0,
+      "displayValue": "0"
+     }
+    ]
+   },
+   "team": {
+    "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/mens-college-basketball/seasons/2026/teams/26?lang=en&region=us"
+   },
+   "date": "2025-12-01T08:00Z",
+   "lastUpdated": "2025-12-02T09:35Z"
+  }
+ ],
+ "availability": {}
+}

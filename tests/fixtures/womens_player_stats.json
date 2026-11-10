@@ -1,0 +1,797 @@
+{
+ "pagination": {
+  "count": 3,
+  "limit": 1000,
+  "page": 1,
+  "pages": 1,
+  "first": "http://site.api.espn.com:80/apis/common/v3/sports/basketball/womens-college-basketball/statistics/byathlete?season=2026&limit=1000",
+  "last": "http://site.api.espn.com:80/apis/common/v3/sports/basketball/womens-college-basketball/statistics/byathlete?season=2026&limit=1000&page=7"
+ },
+ "league": {
+  "id": "54",
+  "name": "NCAA Women's Basketball",
+  "abbreviation": "NCAAW",
+  "slug": "womens-college-basketball",
+  "midsizeName": "NCAAW Basketball",
+  "shortName": "NCAAW"
+ },
+ "athletes": [
+  {
+   "athlete": {
+    "id": "5323812",
+    "type": "basketball",
+    "firstName": "Mallie",
+    "lastName": "McNair",
+    "displayName": "Mallie McNair",
+    "shortName": "M. McNair",
+    "position": {
+     "id": "3",
+     "name": "Guard",
+     "displayName": "Guard",
+     "abbreviation": "G",
+     "leaf": false,
+     "slug": "guard"
+    },
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "teamName": "Chargers",
+    "teamShortName": "BRCF",
+    "teams": [
+     {
+      "id": "3065",
+      "slug": "briar-cliff-chargers",
+      "name": "Chargers",
+      "nickname": "Briar Cliff",
+      "abbreviation": "BRCF",
+      "displayName": "Briar Cliff Chargers",
+      "shortDisplayName": "Briar Cliff",
+      "color": "000000"
+     }
+    ],
+    "slug": "mallie-mcnair",
+    "teamId": "3065",
+    "teamUId": "s:40~l:54~t:3065"
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "totals": [
+      "1",
+      "34.0",
+      "2.0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0.00",
+      "34",
+      "5",
+      "2",
+      "5.0"
+     ],
+     "values": [
+      1.0,
+      34.0,
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      34.0,
+      5.0,
+      2.0,
+      5.0
+     ],
+     "ranks": [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    },
+    {
+     "name": "offensive",
+     "displayName": "Own Offensive",
+     "totals": [
+      "40.0",
+      "15.0",
+      "28.0",
+      "53.6",
+      "3.0",
+      "5.0",
+      "60.0",
+      "7.0",
+      "9.0",
+      "77.8",
+      "0.0",
+      "1.0",
+      "40",
+      "15",
+      "28",
+      "3",
+      "5",
+      "7",
+      "9",
+      "0",
+      "1"
+     ],
+     "values": [
+      40.0,
+      15.0,
+      28.0,
+      53.57142686843872,
+      3.0,
+      5.0,
+      60.00000238418579,
+      7.0,
+      9.0,
+      77.77777910232544,
+      0.0,
+      1.0,
+      40.0,
+      15.0,
+      28.0,
+      3.0,
+      5.0,
+      7.0,
+      9.0,
+      0.0,
+      1.0
+     ],
+     "ranks": [
+      "1",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    },
+    {
+     "name": "defensive",
+     "displayName": "Own Defensive",
+     "totals": [
+      "2.0",
+      "0.0",
+      "2",
+      "0"
+     ],
+     "values": [
+      2.0,
+      0.0,
+      2.0,
+      0.0
+     ],
+     "ranks": [
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ]
+  },
+  {
+   "athlete": {
+    "id": "5326515",
+    "type": "basketball",
+    "firstName": "Emma",
+    "lastName": "Pedroza",
+    "displayName": "Emma Pedroza",
+    "shortName": "E. Pedroza",
+    "position": {
+     "id": "3",
+     "name": "Guard",
+     "displayName": "Guard",
+     "abbreviation": "G",
+     "leaf": false,
+     "slug": "guard"
+    },
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "teamName": "LOURDES",
+    "teamShortName": "LOUR",
+    "teams": [
+     {
+      "id": "3233",
+      "slug": "lourdes-lourdes",
+      "name": "LOURDES",
+      "nickname": "Lourdes",
+      "abbreviation": "LOUR",
+      "displayName": "Lourdes LOURDES",
+      "shortDisplayName": "Lourdes",
+      "color": "000000"
+     }
+    ],
+    "slug": "emma-pedroza",
+    "teamId": "3233",
+    "teamUId": "s:40~l:54~t:3233"
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "splitId": "0",
+     "totals": [
+      "1",
+      "38.0",
+      "2.0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0.00",
+      "38",
+      "6",
+      "2",
+      "6.0"
+     ],
+     "values": [
+      1.0,
+      38.0,
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      38.0,
+      6.0,
+      2.0,
+      6.0
+     ],
+     "ranks": [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    },
+    {
+     "name": "offensive",
+     "displayName": "Own Offensive",
+     "splitId": "0",
+     "totals": [
+      "32.0",
+      "14.0",
+      "31.0",
+      "45.2",
+      "4.0",
+      "13.0",
+      "30.8",
+      "0.0",
+      "0.0",
+      "0.0",
+      "1.0",
+      "7.0",
+      "32",
+      "14",
+      "31",
+      "4",
+      "13",
+      "0",
+      "0",
+      "1",
+      "7"
+     ],
+     "values": [
+      32.0,
+      14.0,
+      31.0,
+      45.16128897666931,
+      4.0,
+      13.0,
+      30.769231915473938,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      7.0,
+      32.0,
+      14.0,
+      31.0,
+      4.0,
+      13.0,
+      0.0,
+      0.0,
+      1.0,
+      7.0
+     ],
+     "ranks": [
+      "2",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    },
+    {
+     "name": "defensive",
+     "displayName": "Own Defensive",
+     "splitId": "0",
+     "totals": [
+      "1.0",
+      "1.0",
+      "1",
+      "1"
+     ],
+     "values": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ranks": [
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ]
+  },
+  {
+   "athlete": {
+    "id": "5181050",
+    "type": "basketball",
+    "firstName": "Shaneal",
+    "lastName": "Corpuz",
+    "displayName": "Shaneal Corpuz",
+    "shortName": "S. Corpuz",
+    "position": {
+     "id": "3",
+     "name": "Guard",
+     "displayName": "Guard",
+     "abbreviation": "G",
+     "leaf": false,
+     "slug": "guard"
+    },
+    "status": {
+     "id": "1",
+     "name": "Active",
+     "type": "active",
+     "abbreviation": "Active"
+    },
+    "teamName": "Crusaders",
+    "teamShortName": "WILC",
+    "teams": [
+     {
+      "id": "2730",
+      "slug": "william-carey-crusaders",
+      "name": "Crusaders",
+      "nickname": "William Carey",
+      "abbreviation": "WILC",
+      "displayName": "William Carey Crusaders",
+      "shortDisplayName": "William Carey",
+      "color": "000000"
+     }
+    ],
+    "slug": "shaneal-corpuz",
+    "teamId": "2730",
+    "teamUId": "s:40~l:54~t:2730"
+   },
+   "categories": [
+    {
+     "name": "general",
+     "displayName": "Own General",
+     "splitId": "0",
+     "totals": [
+      "1",
+      "35.0",
+      "3.0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0.00",
+      "35",
+      "6",
+      "3",
+      "6.0"
+     ],
+     "values": [
+      1.0,
+      35.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      35.0,
+      6.0,
+      3.0,
+      6.0
+     ],
+     "ranks": [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    },
+    {
+     "name": "offensive",
+     "displayName": "Own Offensive",
+     "splitId": "0",
+     "totals": [
+      "31.0",
+      "9.0",
+      "22.0",
+      "40.9",
+      "1.0",
+      "2.0",
+      "50.0",
+      "12.0",
+      "15.0",
+      "80.0",
+      "2.0",
+      "1.0",
+      "31",
+      "9",
+      "22",
+      "1",
+      "2",
+      "12",
+      "15",
+      "2",
+      "1"
+     ],
+     "values": [
+      31.0,
+      9.0,
+      22.0,
+      40.909090638160706,
+      1.0,
+      2.0,
+      50.0,
+      12.0,
+      15.0,
+      80.0000011920929,
+      2.0,
+      1.0,
+      31.0,
+      9.0,
+      22.0,
+      1.0,
+      2.0,
+      12.0,
+      15.0,
+      2.0,
+      1.0
+     ],
+     "ranks": [
+      "3",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    },
+    {
+     "name": "defensive",
+     "displayName": "Own Defensive",
+     "splitId": "0",
+     "totals": [
+      "1.0",
+      "1.0",
+      "1",
+      "1"
+     ],
+     "values": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "ranks": [
+      "-",
+      "-",
+      "-",
+      "-"
+     ]
+    }
+   ]
+  }
+ ],
+ "currentSeason": {
+  "year": 2027,
+  "displayName": "2026-27",
+  "startDate": "2026-07-13T07:00:00.000+00:00",
+  "endDate": "2027-04-07T06:59:00.000+00:00",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "startDate": "2026-11-01T07:00:00.000+00:00",
+   "endDate": "2027-03-16T06:59:00.000+00:00",
+   "week": {
+    "number": 2,
+    "startDate": "2026-11-09T08:00:00.000+00:00",
+    "endDate": "2026-11-16T07:59:00.000+00:00",
+    "text": "Week 2"
+   }
+  }
+ },
+ "requestedSeason": {
+  "year": 2026,
+  "displayName": "2025-26",
+  "startDate": "2025-07-01T07:00:00.000+00:00",
+  "endDate": "2026-04-08T06:59:00.000+00:00",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "startDate": "2025-11-03T08:00:00.000+00:00",
+   "endDate": "2026-03-17T06:59:00.000+00:00",
+   "week": {}
+  }
+ },
+ "categories": [
+  {
+   "name": "general",
+   "displayName": "Own General",
+   "labels": [
+    "GP",
+    "MIN",
+    "PF",
+    "TECH",
+    "EJECT",
+    "DD2",
+    "TD3",
+    "PER",
+    "MIN",
+    "REB",
+    "PF",
+    "REB"
+   ],
+   "names": [
+    "gamesPlayed",
+    "avgMinutes",
+    "avgFouls",
+    "technicalFouls",
+    "ejections",
+    "doubleDouble",
+    "tripleDouble",
+    "PER",
+    "minutes",
+    "rebounds",
+    "fouls",
+    "avgRebounds"
+   ],
+   "displayNames": [
+    "Games Played",
+    "Minutes Per Game",
+    "Fouls Per Game",
+    "Technical Fouls",
+    "Ejections",
+    "Double Double",
+    "Triple Double",
+    "Player Efficiency Rating",
+    "Minutes",
+    "Rebounds",
+    "Fouls",
+    "Rebounds Per Game"
+   ],
+   "descriptions": [
+    "Games Played",
+    "The average number of minutes per game.",
+    "The average fouls committed per game.",
+    "The number of times an player or coach was called for a technical foul (unsportsmanlike conduct or violations).",
+    "The number of times a player or coach is removed from the game as a result of a serious offense.",
+    "The number of times double digit values were accumulated in 2 of the following categories: points, rebounds, assists, steals, and blocked shots",
+    "The number of times double digit values were accumulated in 3 of the following categories: points, rebounds, assists, steals, and blocked shots",
+    "A numerical value for each of a player's accomplishments per-minute and is pace-adjusted for the team they play on. The league average in PER to 15.00 every season.",
+    "The total number of minutes played.",
+    "The total number of rebounds (offensive and defensive).",
+    "The number of times a player had illegal contact with the opponent.",
+    "The average rebounds per game."
+   ]
+  },
+  {
+   "name": "offensive",
+   "displayName": "Own Offensive",
+   "labels": [
+    "PTS",
+    "FGM",
+    "FGA",
+    "FG%",
+    "3PM",
+    "3PA",
+    "3P%",
+    "FTM",
+    "FTA",
+    "FT%",
+    "AST",
+    "TO",
+    "PTS",
+    "FGM",
+    "FGA",
+    "3PM",
+    "3PA",
+    "FTM",
+    "FTA",
+    "AST",
+    "TO"
+   ],
+   "names": [
+    "avgPoints",
+    "avgFieldGoalsMade",
+    "avgFieldGoalsAttempted",
+    "fieldGoalPct",
+    "avgThreePointFieldGoalsMade",
+    "avgThreePointFieldGoalsAttempted",
+    "threePointFieldGoalPct",
+    "avgFreeThrowsMade",
+    "avgFreeThrowsAttempted",
+    "freeThrowPct",
+    "avgAssists",
+    "avgTurnovers",
+    "points",
+    "fieldGoalsMade",
+    "fieldGoalsAttempted",
+    "threePointFieldGoalsMade",
+    "threePointFieldGoalsAttempted",
+    "freeThrowsMade",
+    "freeThrowsAttempted",
+    "assists",
+    "turnovers"
+   ],
+   "displayNames": [
+    "Points Per Game",
+    "Average Field Goals Made",
+    "Average Field Goals Attempted",
+    "Field Goal Percentage",
+    "Average 3-Point Field Goals Made",
+    "Average 3-Point Field Goals Attempted",
+    "3-Point Field Goal Percentage",
+    "Average Free Throws Made",
+    "Average Free Throws Attempted",
+    "Free Throw Percentage",
+    "Assists Per Game",
+    "Turnovers Per Game",
+    "Points",
+    "Field Goals Made",
+    "Field Goals Attempted",
+    "3-Point Field Goals Made",
+    "3-Point Field Goals Attempted",
+    "Free Throws Made",
+    "Free Throws Attempted",
+    "Assists",
+    "Turnovers"
+   ],
+   "descriptions": [
+    "The average number of points scored per game.",
+    "The average field goals made per game.",
+    "The average field goals attempted per game.",
+    "The ratio of field goals made to field goals attempted: FGM / FGA",
+    "The average three point field goals made per game.",
+    "The average three point field goals attempted per game.",
+    "The ratio of 3pt field goals made to 3pt field goals attempted: 3PM / 3PA.",
+    "The average free throw shots made per game.",
+    "The average free throw shots attempted per game.",
+    "The ratio of free throws made to free throws attempted: FTM / FTA",
+    "The average assists per game.",
+    "The average turnovers committed per game.",
+    "The number of points scored.",
+    "The number of times a 2pt field goal was made.",
+    "The number of times a 2pt field goal was attempted.",
+    "The number of times a 3pt field goal was made.",
+    "The number of times a 3pt field goal was attempted.",
+    "The number of times a free throw was made.",
+    "The number of times a free throw was attempted.",
+    "The number of times a player who passes the ball to a teammate in a way that leads to a score by field goal, meaning that he or she was \"assisting\" in the basket. There is some judgment involved in deciding whether a passer should be credited with an assist.",
+    "The number of times a player loses possession to the other team."
+   ]
+  },
+  {
+   "name": "defensive",
+   "displayName": "Own Defensive",
+   "labels": [
+    "STL",
+    "BLK",
+    "STL",
+    "BLK"
+   ],
+   "names": [
+    "avgSteals",
+    "avgBlocks",
+    "steals",
+    "blocks"
+   ],
+   "displayNames": [
+    "Steals Per Game",
+    "Blocks Per Game",
+    "Steals",
+    "Blocks"
+   ],
+   "descriptions": [
+    "The average steals per game.",
+    "The average blocks per game.",
+    "The number of times a defensive player forced a turnover by intercepting or deflecting a pass or a dribble of an offensive player.",
+    "Short for blocked shot, number of times when a defensive player legally deflects a field goal attempt from an offensive player."
+   ]
+  }
+ ]
+}

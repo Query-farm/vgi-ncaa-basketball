@@ -1,0 +1,79 @@
+{
+ "sport": "Men's Basketball",
+ "title": "Points Per Game",
+ "updated": "Tuesday, November 10, 2026 7:11 am - Through games Monday, November 09, 2026",
+ "page": 1,
+ "pages": 1,
+ "data": [
+  {
+   "Rank": "1",
+   "Name": "Dior Johnson",
+   "Team": "UCF",
+   "Cl": "Sr.",
+   "Height": "6-3",
+   "Position": "G",
+   "G": "2",
+   "FGM": "22",
+   "3FG": "6",
+   "FT": "19",
+   "PTS": "69",
+   "PPG": "34.5"
+  },
+  {
+   "Rank": "2",
+   "Name": "Jayden Reid",
+   "Team": "Memphis",
+   "Cl": "Sr.",
+   "Height": "5-10",
+   "Position": "G",
+   "G": "2",
+   "FGM": "17",
+   "3FG": "5",
+   "FT": "19",
+   "PTS": "58",
+   "PPG": "29.0"
+  },
+  {
+   "Rank": "3",
+   "Name": "Money Williams",
+   "Team": "Boston College",
+   "Cl": "Sr.",
+   "Height": "6-4",
+   "Position": "G",
+   "G": "2",
+   "FGM": "15",
+   "3FG": "3",
+   "FT": "24",
+   "PTS": "57",
+   "PPG": "28.5"
+  },
+  {
+   "Rank": "4",
+   "Name": "Andrej Acimovic",
+   "Team": "Missouri St.",
+   "Cl": "So.",
+   "Height": "6-10",
+   "Position": "C",
+   "G": "2",
+   "FGM": "21",
+   "3FG": "3",
+   "FT": "10",
+   "PTS": "55",
+   "PPG": "27.5"
+  },
+  {
+   "Rank": "5",
+   "Name": "Jaden Alexander",
+   "Team": "CSU Bakersfield",
+   "Cl": "Sr.",
+   "Height": "6-4",
+   "Position": "G",
+   "G": "2",
+   "FGM": "17",
+   "3FG": "9",
+   "FT": "11",
+   "PTS": "54",
+   "PPG": "27.0"
+  }
+ ]
+}

@@ -1,0 +1,415 @@
+{
+ "championships": [
+  {
+   "__typename": "Championship",
+   "title": "2026 DI Women's Basketball Championship",
+   "year": 2026,
+   "dataPath": "/carmen/brackets/championships/basketball-women/d1/2026",
+   "bracketTemplate": "bracket_68.json",
+   "season": 2025,
+   "sportUrl": "basketball-women",
+   "championshipId": 6394,
+   "divisionName": "d1",
+   "games": [
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534724,
+     "bracketPositionId": 601,
+     "bracketId": 601,
+     "victorGamePosition": "Top",
+     "victorBracketPositionId": 701,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "04/03/2026",
+     "startTime": "19:00",
+     "startTimeEpoch": 1775257200,
+     "sectionId": 6,
+     "title": "South Carolina vs UConn",
+     "url": "/game/6534724",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": true,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/u/uconn.70.png",
+       "score": 48,
+       "seed": 1,
+       "nameShort": "UConn",
+       "nameFull": "University of Connecticut",
+       "seoname": "uconn",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": false,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/s/south-carolina.70.png",
+       "score": 62,
+       "seed": 1,
+       "nameShort": "South Carolina",
+       "nameFull": "University of South Carolina, Columbia",
+       "seoname": "south-carolina",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "ESPN"
+     }
+    },
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534725,
+     "bracketPositionId": 602,
+     "bracketId": 602,
+     "victorGamePosition": "Bottom",
+     "victorBracketPositionId": 701,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "04/03/2026",
+     "startTime": "21:30",
+     "startTimeEpoch": 1775266200,
+     "sectionId": 6,
+     "title": "Texas vs UCLA",
+     "url": "/game/6534725",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": true,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/u/ucla.70.png",
+       "score": 51,
+       "seed": 1,
+       "nameShort": "UCLA",
+       "nameFull": "University of California, Los Angeles",
+       "seoname": "ucla",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": false,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/t/texas.70.png",
+       "score": 44,
+       "seed": 1,
+       "nameShort": "Texas",
+       "nameFull": "University of Texas at Austin",
+       "seoname": "texas",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "ESPN"
+     }
+    },
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534726,
+     "bracketPositionId": 701,
+     "bracketId": 701,
+     "victorGamePosition": null,
+     "victorBracketPositionId": null,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "04/05/2026",
+     "startTime": "15:30",
+     "startTimeEpoch": 1775417400,
+     "sectionId": 6,
+     "title": "South Carolina vs UCLA",
+     "url": "/game/6534726",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": true,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/s/south-carolina.70.png",
+       "score": 51,
+       "seed": 1,
+       "nameShort": "South Carolina",
+       "nameFull": "University of South Carolina, Columbia",
+       "seoname": "south-carolina",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": false,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/u/ucla.70.png",
+       "score": 79,
+       "seed": 1,
+       "nameShort": "UCLA",
+       "nameFull": "University of California, Los Angeles",
+       "seoname": "ucla",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "ABC"
+     }
+    },
+    {
+     "__typename": "ChampionshipGame",
+     "contestId": 6534660,
+     "bracketPositionId": 101,
+     "bracketId": 101,
+     "victorGamePosition": "Bottom",
+     "victorBracketPositionId": 225,
+     "loserGamePosition": null,
+     "loserBracketPositionId": null,
+     "contestClock": "",
+     "currentPeriod": "FINAL",
+     "finalMessage": "FINAL",
+     "gameState": "F",
+     "statusCodeDisplay": "final",
+     "liveVideoEnabled": false,
+     "hasStartTime": true,
+     "startDate": "03/18/2026",
+     "startTime": "21:00",
+     "startTimeEpoch": 1773882000,
+     "sectionId": 1,
+     "title": "SFA vs Missouri St.",
+     "url": "/game/6534660",
+     "enabled": true,
+     "isIfNecessary": false,
+     "visible": true,
+     "isTopVisible": true,
+     "isBottomVisible": true,
+     "teams": [
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": true,
+       "isTop": true,
+       "isWinner": true,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/m/missouri-st.70.png",
+       "score": 85,
+       "seed": 16,
+       "nameShort": "Missouri St.",
+       "nameFull": "Missouri State University",
+       "seoname": "missouri-st",
+       "textOverride": null
+      },
+      {
+       "__typename": "ChampionshipTeam",
+       "isHome": false,
+       "isTop": false,
+       "isWinner": false,
+       "isVisible": true,
+       "logoUrl": "/sites/default/files/images/logos/schools/s/stephen-f-austin.70.png",
+       "score": 75,
+       "seed": 16,
+       "nameShort": "Stephen F. Austin",
+       "nameFull": "Stephen F. Austin State University",
+       "seoname": "stephen-f-austin",
+       "textOverride": null
+      }
+     ],
+     "stream": {
+      "__typename": "Stream",
+      "syndicateOnly": false,
+      "enabled": false,
+      "state": "pre",
+      "url": ""
+     },
+     "broadcaster": {
+      "__typename": "Broadcaster",
+      "name": "ESPN2"
+     }
+    }
+   ],
+   "rounds": [
+    {
+     "__typename": "Round",
+     "id": "8698",
+     "roundNumber": 1,
+     "label": "FIRST FOUR",
+     "staged": true,
+     "subtitle": "3/18-3/19",
+     "title": "First Four&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8699",
+     "roundNumber": 2,
+     "label": "FIRST ROUND",
+     "staged": true,
+     "subtitle": "3/20-3/21",
+     "title": "First Round"
+    },
+    {
+     "__typename": "Round",
+     "id": "8700",
+     "roundNumber": 3,
+     "label": "SECOND ROUND",
+     "staged": true,
+     "subtitle": "3/22-3/23",
+     "title": "Second Round"
+    },
+    {
+     "__typename": "Round",
+     "id": "8701",
+     "roundNumber": 4,
+     "label": "SWEET 16",
+     "staged": true,
+     "subtitle": "3/27-3/28",
+     "title": "Sweet 16&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8702",
+     "roundNumber": 5,
+     "label": "ELITE EIGHT",
+     "staged": true,
+     "subtitle": "3/29-3/30",
+     "title": "Elite Eight&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8703",
+     "roundNumber": 6,
+     "label": "FINAL FOUR",
+     "staged": true,
+     "subtitle": "4/3",
+     "title": "FINAL FOUR&#174;"
+    },
+    {
+     "__typename": "Round",
+     "id": "8704",
+     "roundNumber": 7,
+     "label": "FINAL FOUR",
+     "staged": true,
+     "subtitle": "4/5",
+     "title": "Championship"
+    }
+   ],
+   "regions": [
+    {
+     "__typename": "RegionSection",
+     "id": "4036",
+     "abbreviation": "",
+     "title": "",
+     "subtitle": "",
+     "sectionId": 1,
+     "regionCode": "TT"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4037",
+     "abbreviation": "F1",
+     "title": "FORT WORTH 1",
+     "subtitle": "",
+     "sectionId": 2,
+     "regionCode": "TL"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4038",
+     "abbreviation": "S2",
+     "title": "SACRAMENTO 2",
+     "subtitle": "",
+     "sectionId": 3,
+     "regionCode": "TR"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4039",
+     "abbreviation": "S4",
+     "title": "SACRAMENTO 4",
+     "subtitle": "",
+     "sectionId": 4,
+     "regionCode": "BL"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4040",
+     "abbreviation": "F3",
+     "title": "FORT WORTH 3",
+     "subtitle": "",
+     "sectionId": 5,
+     "regionCode": "BR"
+    },
+    {
+     "__typename": "RegionSection",
+     "id": "4041",
+     "abbreviation": "",
+     "title": "",
+     "subtitle": "",
+     "sectionId": 6,
+     "regionCode": "CC"
+    }
+   ],
+   "sections": []
+  }
+ ]
+}

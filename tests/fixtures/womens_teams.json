@@ -1,0 +1,217 @@
+{
+ "sports": [
+  {
+   "id": "40",
+   "leagues": [
+    {
+     "abbreviation": "NCAAW",
+     "id": "54",
+     "name": "NCAA Women's Basketball",
+     "season": {
+      "displayName": "2026-27",
+      "year": 2027
+     },
+     "shortName": "NCAAW",
+     "slug": "womens-college-basketball",
+     "teams": [
+      {
+       "team": {
+        "abbreviation": "ARK",
+        "alternateColor": "ffffff",
+        "color": "a32136",
+        "displayName": "Arkansas Razorbacks",
+        "id": "8",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Arkansas",
+        "name": "Razorbacks",
+        "nickname": "Arkansas",
+        "shortDisplayName": "Arkansas",
+        "slug": "arkansas-razorbacks"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "AUB",
+        "alternateColor": "f26522",
+        "color": "002b5c",
+        "displayName": "Auburn Tigers",
+        "id": "2",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Auburn",
+        "name": "Tigers",
+        "nickname": "Auburn",
+        "shortDisplayName": "Auburn",
+        "slug": "auburn-tigers"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "DUKE",
+        "alternateColor": "ffffff",
+        "color": "00539b",
+        "displayName": "Duke Blue Devils",
+        "id": "150",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Duke",
+        "name": "Blue Devils",
+        "nickname": "Duke",
+        "shortDisplayName": "Duke",
+        "slug": "duke-blue-devils"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "FLA",
+        "alternateColor": "fa4616",
+        "color": "0021a5",
+        "displayName": "Florida Gators",
+        "id": "57",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Florida",
+        "name": "Gators",
+        "nickname": "Florida",
+        "shortDisplayName": "Florida",
+        "slug": "florida-gators"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "MSST",
+        "alternateColor": "c1c6c8",
+        "color": "5d1725",
+        "displayName": "Mississippi State Bulldogs",
+        "id": "344",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Mississippi State",
+        "name": "Bulldogs",
+        "nickname": "Mississippi St",
+        "shortDisplayName": "Mississippi St",
+        "slug": "mississippi-state-bulldogs"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "MIZ",
+        "alternateColor": "000000",
+        "color": "f1b82d",
+        "displayName": "Missouri Tigers",
+        "id": "142",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Missouri",
+        "name": "Tigers",
+        "nickname": "Missouri",
+        "shortDisplayName": "Missouri",
+        "slug": "missouri-tigers"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "NU",
+        "alternateColor": "ffffff",
+        "color": "492f92",
+        "displayName": "Northwestern Wildcats",
+        "id": "77",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Northwestern",
+        "name": "Wildcats",
+        "nickname": "Northwestern",
+        "shortDisplayName": "Northwestern",
+        "slug": "northwestern-wildcats"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "PSU",
+        "alternateColor": "ffffff",
+        "color": "061440",
+        "displayName": "Penn State Lady Lions",
+        "id": "213",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Penn State",
+        "name": "Lady Lions",
+        "nickname": "Penn State",
+        "shortDisplayName": "Penn State",
+        "slug": "penn-state-lady-lions"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "PUR",
+        "alternateColor": "000000",
+        "color": "ceb888",
+        "displayName": "Purdue Boilermakers",
+        "id": "2509",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Purdue",
+        "name": "Boilermakers",
+        "nickname": "Purdue",
+        "shortDisplayName": "Purdue",
+        "slug": "purdue-boilermakers"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "RUTG",
+        "alternateColor": "ffffff",
+        "color": "ce0e2d",
+        "displayName": "Rutgers Scarlet Knights",
+        "id": "164",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Rutgers",
+        "name": "Scarlet Knights",
+        "nickname": "Rutgers",
+        "shortDisplayName": "Rutgers",
+        "slug": "rutgers-scarlet-knights"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "CONN",
+        "alternateColor": "a2aaad",
+        "color": "0c2340",
+        "displayName": "UConn Huskies",
+        "id": "41",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "UConn",
+        "name": "Huskies",
+        "nickname": "UConn",
+        "shortDisplayName": "UConn",
+        "slug": "uconn-huskies"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "WIS",
+        "alternateColor": "ffffff",
+        "color": "a00000",
+        "displayName": "Wisconsin Badgers",
+        "id": "275",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Wisconsin",
+        "name": "Badgers",
+        "nickname": "Wisconsin",
+        "shortDisplayName": "Wisconsin",
+        "slug": "wisconsin-badgers"
+       }
+      }
+     ],
+     "year": 2027
+    }
+   ],
+   "name": "Basketball",
+   "slug": "basketball"
+  }
+ ]
+}

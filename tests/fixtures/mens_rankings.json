@@ -1,0 +1,436 @@
+{
+ "rankings": [
+  {
+   "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/types/2/weeks/2/rankings/1?lang=en&region=us",
+   "id": "1",
+   "name": "AP Top 25",
+   "shortName": "AP Poll",
+   "type": "ap",
+   "occurrence": {
+    "number": 2,
+    "type": "week",
+    "last": false,
+    "value": "2",
+    "displayValue": "Week 2"
+   },
+   "date": "2026-11-09T08:00Z",
+   "headline": "2027 NCAA Basketball Rankings - AP Top 25 Week 2",
+   "shortHeadline": "2027 : Week 2",
+   "season": {
+    "year": 2027,
+    "startDate": "2026-07-13T07:00Z",
+    "endDate": "2027-04-07T06:59Z",
+    "displayName": "2026-27",
+    "type": {
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg"
+    },
+    "powerIndexes": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/powerindex?lang=en&region=us"
+    },
+    "powerIndexLeaders": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/powerindex/leaders?lang=en&region=us"
+    },
+    "athletes": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/athletes?lang=en&region=us"
+    },
+    "futures": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/futures?lang=en&region=us"
+    },
+    "leaders": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/types/2/leaders?lang=en&region=us"
+    }
+   },
+   "lastUpdated": "2026-11-09T21:19Z",
+   "ranks": [
+    {
+     "current": 1,
+     "previous": 1,
+     "points": 1490.0,
+     "firstPlaceVotes": 53,
+     "trend": "-",
+     "team": {
+      "id": "57",
+      "location": "Florida",
+      "name": "Gators",
+      "nickname": "Florida",
+      "abbreviation": "FLA",
+      "color": "0021a5",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 2,
+     "previous": 2,
+     "points": 1432.0,
+     "firstPlaceVotes": 7,
+     "trend": "-",
+     "team": {
+      "id": "150",
+      "location": "Duke",
+      "name": "Blue Devils",
+      "nickname": "Duke",
+      "abbreviation": "DUKE",
+      "color": "00539b",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 3,
+     "previous": 3,
+     "points": 1366.0,
+     "firstPlaceVotes": 0,
+     "trend": "-",
+     "team": {
+      "id": "356",
+      "location": "Illinois",
+      "name": "Fighting Illini",
+      "nickname": "Illinois",
+      "abbreviation": "ILL",
+      "color": "ff5f05",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 4,
+     "previous": 4,
+     "points": 1339.0,
+     "firstPlaceVotes": 0,
+     "trend": "-",
+     "team": {
+      "id": "41",
+      "location": "UConn",
+      "name": "Huskies",
+      "nickname": "UConn",
+      "abbreviation": "CONN",
+      "color": "0c2340",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:19Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 5,
+     "previous": 6,
+     "points": 1222.0,
+     "firstPlaceVotes": 0,
+     "trend": "+1",
+     "team": {
+      "id": "127",
+      "location": "Michigan State",
+      "name": "Spartans",
+      "nickname": "Michigan St",
+      "abbreviation": "MSU",
+      "color": "173f35",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:19Z",
+     "recordSummary": "2-0"
+    }
+   ],
+   "others": [
+    {
+     "current": 0,
+     "previous": 0,
+     "points": 97.0,
+     "firstPlaceVotes": 0,
+     "trend": "+26",
+     "team": {
+      "id": "235",
+      "location": "Memphis",
+      "name": "Tigers",
+      "nickname": "Memphis",
+      "abbreviation": "MEM",
+      "color": "004991",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:24Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 0,
+     "previous": 0,
+     "points": 67.0,
+     "firstPlaceVotes": 0,
+     "trend": "+26",
+     "team": {
+      "id": "139",
+      "location": "Saint Louis",
+      "name": "Billikens",
+      "nickname": "Saint Louis",
+      "abbreviation": "SLU",
+      "color": "00539C",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/139.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:24Z",
+     "recordSummary": "0-0"
+    }
+   ],
+   "droppedOut": [
+    {
+     "current": 0,
+     "previous": 18,
+     "points": 57.0,
+     "firstPlaceVotes": 0,
+     "trend": "+18",
+     "team": {
+      "id": "66",
+      "location": "Iowa State",
+      "name": "Cyclones",
+      "nickname": "Iowa State",
+      "abbreviation": "ISU",
+      "color": "ae192d",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:24Z",
+     "recordSummary": "0-0"
+    }
+   ],
+   "availability": {},
+   "firstOccurrence": {
+    "type": "week",
+    "value": "1"
+   }
+  },
+  {
+   "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/types/2/weeks/2/rankings/2?lang=en&region=us",
+   "id": "2",
+   "name": "Coaches Poll",
+   "shortName": "Coaches Poll",
+   "type": "usa",
+   "occurrence": {
+    "number": 2,
+    "type": "week",
+    "last": false,
+    "value": "2",
+    "displayValue": "Week 2"
+   },
+   "date": "2026-11-09T08:00Z",
+   "headline": "2027 NCAA Basketball Rankings - Coaches Poll Week 2",
+   "shortHeadline": "2027 : Week 2",
+   "season": {
+    "year": 2027,
+    "startDate": "2026-07-13T07:00Z",
+    "endDate": "2027-04-07T06:59Z",
+    "displayName": "2026-27",
+    "type": {
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg"
+    },
+    "powerIndexes": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/powerindex?lang=en&region=us"
+    },
+    "powerIndexLeaders": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/powerindex/leaders?lang=en&region=us"
+    },
+    "athletes": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/athletes?lang=en&region=us"
+    },
+    "futures": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/futures?lang=en&region=us"
+    },
+    "leaders": {
+     "$ref": "http://sports.core.api.espn.pvt/v2/sports/basketball/leagues/mens-college-basketball/seasons/2027/types/2/leaders?lang=en&region=us"
+    }
+   },
+   "lastUpdated": "2026-11-09T21:51Z",
+   "ranks": [
+    {
+     "current": 1,
+     "previous": 1,
+     "points": 786.0,
+     "firstPlaceVotes": 22,
+     "trend": "-",
+     "team": {
+      "id": "57",
+      "location": "Florida",
+      "name": "Gators",
+      "nickname": "Florida",
+      "abbreviation": "FLA",
+      "color": "0021a5",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 2,
+     "previous": 2,
+     "points": 774.0,
+     "firstPlaceVotes": 9,
+     "trend": "-",
+     "team": {
+      "id": "150",
+      "location": "Duke",
+      "name": "Blue Devils",
+      "nickname": "Duke",
+      "abbreviation": "DUKE",
+      "color": "00539b",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 3,
+     "previous": 3,
+     "points": 734.0,
+     "firstPlaceVotes": 1,
+     "trend": "-",
+     "team": {
+      "id": "356",
+      "location": "Illinois",
+      "name": "Fighting Illini",
+      "nickname": "Illinois",
+      "abbreviation": "ILL",
+      "color": "ff5f05",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 4,
+     "previous": 5,
+     "points": 695.0,
+     "firstPlaceVotes": 0,
+     "trend": "+1",
+     "team": {
+      "id": "41",
+      "location": "UConn",
+      "name": "Huskies",
+      "nickname": "UConn",
+      "abbreviation": "CONN",
+      "color": "0c2340",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "2-0"
+    },
+    {
+     "current": 5,
+     "previous": 6,
+     "points": 631.0,
+     "firstPlaceVotes": 0,
+     "trend": "+1",
+     "team": {
+      "id": "127",
+      "location": "Michigan State",
+      "name": "Spartans",
+      "nickname": "Michigan St",
+      "abbreviation": "MSU",
+      "color": "173f35",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "2-0"
+    }
+   ],
+   "others": [
+    {
+     "current": 0,
+     "previous": 23,
+     "points": 101.0,
+     "firstPlaceVotes": 0,
+     "trend": "+23",
+     "team": {
+      "id": "96",
+      "location": "Kentucky",
+      "name": "Wildcats",
+      "nickname": "Kentucky",
+      "abbreviation": "UK",
+      "color": "0033a0",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "0-0"
+    },
+    {
+     "current": 0,
+     "previous": 0,
+     "points": 34.0,
+     "firstPlaceVotes": 0,
+     "trend": "+26",
+     "team": {
+      "id": "235",
+      "location": "Memphis",
+      "name": "Tigers",
+      "nickname": "Memphis",
+      "abbreviation": "MEM",
+      "color": "004991",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "0-0"
+    }
+   ],
+   "droppedOut": [
+    {
+     "current": 0,
+     "previous": 23,
+     "points": 101.0,
+     "firstPlaceVotes": 0,
+     "trend": "+23",
+     "team": {
+      "id": "96",
+      "location": "Kentucky",
+      "name": "Wildcats",
+      "nickname": "Kentucky",
+      "abbreviation": "UK",
+      "color": "0033a0",
+      "logo": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png"
+     },
+     "date": "2026-11-09T08:00Z",
+     "lastUpdated": "2026-11-09T21:51Z",
+     "recordSummary": "0-0"
+    }
+   ],
+   "availability": {},
+   "firstOccurrence": {
+    "type": "week",
+    "value": "1"
+   }
+  }
+ ],
+ "latestSeason": {
+  "year": 2027,
+  "startDate": "2026-07-13T07:00Z",
+  "endDate": "2027-04-07T06:59Z",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "abbreviation": "reg"
+  }
+ },
+ "latestWeek": {
+  "number": 2,
+  "type": "week",
+  "last": false,
+  "value": "2",
+  "displayValue": "Week 2"
+ }
+}

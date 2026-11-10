@@ -1,0 +1,44 @@
+{
+ "sport": "Men's Basketball",
+ "title": "Scoring Offense",
+ "updated": "Tuesday, November 10, 2026 7:11 am - Through games Monday, November 09, 2026",
+ "page": 1,
+ "pages": 1,
+ "data": [
+  {
+   "Rank": "1",
+   "Team": "Southern Utah",
+   "GM": "3",
+   "PTS": "374",
+   "PPG": "124.7"
+  },
+  {
+   "Rank": "2",
+   "Team": "Boise St.",
+   "GM": "2",
+   "PTS": "232",
+   "PPG": "116.0"
+  },
+  {
+   "Rank": "-",
+   "Team": "Illinois",
+   "GM": "2",
+   "PTS": "232",
+   "PPG": "116.0"
+  },
+  {
+   "Rank": "4",
+   "Team": "Col. of Charleston",
+   "GM": "2",
+   "PTS": "223",
+   "PPG": "111.5"
+  },
+  {
+   "Rank": "5",
+   "Team": "Eastern Ky.",
+   "GM": "2",
+   "PTS": "211",
+   "PPG": "105.5"
+  }
+ ]
+}

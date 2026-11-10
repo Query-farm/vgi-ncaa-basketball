@@ -1,0 +1,217 @@
+{
+ "sports": [
+  {
+   "id": "40",
+   "leagues": [
+    {
+     "abbreviation": "NCAAM",
+     "id": "41",
+     "name": "NCAA Men's Basketball",
+     "season": {
+      "displayName": "2026-27",
+      "year": 2027
+     },
+     "shortName": "NCAAM",
+     "slug": "mens-college-basketball",
+     "teams": [
+      {
+       "team": {
+        "abbreviation": "BC",
+        "alternateColor": "dbcca6",
+        "color": "8c2232",
+        "displayName": "Boston College Eagles",
+        "id": "103",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Boston College",
+        "name": "Eagles",
+        "nickname": "Boston College",
+        "shortDisplayName": "Boston College",
+        "slug": "boston-college-eagles"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "DUKE",
+        "alternateColor": "ffffff",
+        "color": "00539b",
+        "displayName": "Duke Blue Devils",
+        "id": "150",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Duke",
+        "name": "Blue Devils",
+        "nickname": "Duke",
+        "shortDisplayName": "Duke",
+        "slug": "duke-blue-devils"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "FLA",
+        "alternateColor": "fa4616",
+        "color": "0021a5",
+        "displayName": "Florida Gators",
+        "id": "57",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Florida",
+        "name": "Gators",
+        "nickname": "Florida",
+        "shortDisplayName": "Florida",
+        "slug": "florida-gators"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "GT",
+        "alternateColor": "ffffff",
+        "color": "b3a369",
+        "displayName": "Georgia Tech Yellow Jackets",
+        "id": "59",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Georgia Tech",
+        "name": "Yellow Jackets",
+        "nickname": "Georgia Tech",
+        "shortDisplayName": "Georgia Tech",
+        "slug": "georgia-tech-yellow-jackets"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "MD",
+        "alternateColor": "ffffff",
+        "color": "ce1126",
+        "displayName": "Maryland Terrapins",
+        "id": "120",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Maryland",
+        "name": "Terrapins",
+        "nickname": "Maryland",
+        "shortDisplayName": "Maryland",
+        "slug": "maryland-terrapins"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "NU",
+        "alternateColor": "ffffff",
+        "color": "492f92",
+        "displayName": "Northwestern Wildcats",
+        "id": "77",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Northwestern",
+        "name": "Wildcats",
+        "nickname": "Northwestern",
+        "shortDisplayName": "Northwestern",
+        "slug": "northwestern-wildcats"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "ND",
+        "alternateColor": "c99700",
+        "color": "062340",
+        "displayName": "Notre Dame Fighting Irish",
+        "id": "87",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Notre Dame",
+        "name": "Fighting Irish",
+        "nickname": "Notre Dame",
+        "shortDisplayName": "Notre Dame",
+        "slug": "notre-dame-fighting-irish"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "ORE",
+        "alternateColor": "fff41b",
+        "color": "00934b",
+        "displayName": "Oregon Ducks",
+        "id": "2483",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Oregon",
+        "name": "Ducks",
+        "nickname": "Oregon",
+        "shortDisplayName": "Oregon",
+        "slug": "oregon-ducks"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "PSU",
+        "alternateColor": "ffffff",
+        "color": "061440",
+        "displayName": "Penn State Nittany Lions",
+        "id": "213",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Penn State",
+        "name": "Nittany Lions",
+        "nickname": "Penn State",
+        "shortDisplayName": "Penn State",
+        "slug": "penn-state-nittany-lions"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "PITT",
+        "alternateColor": "ffb81c",
+        "color": "003594",
+        "displayName": "Pittsburgh Panthers",
+        "id": "221",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Pittsburgh",
+        "name": "Panthers",
+        "nickname": "Pitt",
+        "shortDisplayName": "Pitt",
+        "slug": "pittsburgh-panthers"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "PUR",
+        "alternateColor": "000000",
+        "color": "ceb888",
+        "displayName": "Purdue Boilermakers",
+        "id": "2509",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "Purdue",
+        "name": "Boilermakers",
+        "nickname": "Purdue",
+        "shortDisplayName": "Purdue",
+        "slug": "purdue-boilermakers"
+       }
+      },
+      {
+       "team": {
+        "abbreviation": "CONN",
+        "alternateColor": "a2aaad",
+        "color": "0c2340",
+        "displayName": "UConn Huskies",
+        "id": "41",
+        "isActive": true,
+        "isAllStar": false,
+        "location": "UConn",
+        "name": "Huskies",
+        "nickname": "UConn",
+        "shortDisplayName": "UConn",
+        "slug": "uconn-huskies"
+       }
+      }
+     ],
+     "year": 2027
+    }
+   ],
+   "name": "Basketball",
+   "slug": "basketball"
+  }
+ ]
+}

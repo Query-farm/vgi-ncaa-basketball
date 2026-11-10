@@ -1,0 +1,62 @@
+{
+ "sport": "Men's Basketball",
+ "individual": [
+  {
+   "id": "473",
+   "name": "Assist/Turnover Ratio",
+   "path": "individual/473"
+  },
+  {
+   "id": "605",
+   "name": "Assists",
+   "path": "individual/605"
+  },
+  {
+   "id": "140",
+   "name": "Assists Per Game",
+   "path": "individual/140"
+  },
+  {
+   "id": "608",
+   "name": "Blocks",
+   "path": "individual/608"
+  },
+  {
+   "id": "138",
+   "name": "Blocks Per Game",
+   "path": "individual/138"
+  },
+  {
+   "id": "556",
+   "name": "Double Doubles",
+   "path": "individual/556"
+  },
+  {
+   "id": "136",
+   "name": "Points Per Game",
+   "path": "individual/136"
+  }
+ ],
+ "team": [
+  {
+   "id": "474",
+   "name": "Assist/Turnover Ratio",
+   "path": "team/474"
+  },
+  {
+   "id": "216",
+   "name": "Assists Per Game",
+   "path": "team/216"
+  },
+  {
+   "id": "1284",
+   "name": "Bench Points per game",
+   "path": "team/1284"
+  },
+  {
+   "id": "145",
+   "name": "Scoring Offense",
+   "path": "team/145"
+  }
+ ]
+}
