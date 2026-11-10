@@ -132,7 +132,7 @@ def batch_from_rows(rows: Sequence[Mapping[str, Any]], schema: pa.Schema) -> pa.
 RANKINGS_SCHEMA = pa.schema(
     [
         field("season", pa.int32(), "Season, labelled by the year it ends (2025-26 is 2026)."),
-        field("week", pa.int32(), "Poll week number within the season (1 is the first in-season poll)."),
+        field("week", pa.int32(), "Poll week number within the season (1 is the preseason poll)."),
         field(
             "poll_id",
             pa.int32(),
@@ -478,7 +478,13 @@ GAMES_SCHEMA = pa.schema(
         field("period", pa.int32(), "Current or final period (halves for men, quarters for women)."),
         field("clock", pa.string(), "Game clock display value."),
         field("neutral_site", pa.bool_(), "Whether the game is at a neutral site."),
-        field("conference_game", pa.bool_(), "Whether both teams play in the same conference."),
+        field(
+            "conference_game",
+            pa.bool_(),
+            "Whether both teams are in the same conference, including conference-tournament games "
+            "(as ESPN flags them). In team_schedule it is derived from the season's standings for "
+            "regular-season games and is NULL for NCAA postseason games.",
+        ),
         field("event_note", pa.string(), "Event headline such as a tournament name, when present."),
         field("venue_name", pa.string(), "Arena name."),
         field("venue_city", pa.string(), "Arena city."),
@@ -515,8 +521,41 @@ def _rank(competitor: Mapping[str, Any]) -> int | None:
     return rank if rank is not None and 1 <= rank <= 25 else None
 
 
-def flatten_events(events: Iterable[Any]) -> list[dict[str, Any]]:
-    """Flatten scoreboard or schedule events into one row per game."""
+def conference_index(standings: Mapping[str, Any]) -> dict[int, int]:
+    """Map each team id in a standings document to its conference id."""
+    return {
+        row["team_id"]: row["conference_id"]
+        for row in flatten_standings(standings)
+        if row["conference_id"] is not None
+    }
+
+
+def _derived_conference_game(row: Mapping[str, Any], conferences: Mapping[int, int]) -> bool | None:
+    """Infer a regular-season conference game from both teams' conferences.
+
+    ESPN's team schedule omits ``conferenceCompetition``. In ESPN's regular
+    season (which includes conference tournaments, flagged as conference games
+    on its scoreboard) two members of the same conference meet only in
+    conference play, and a Division I team that meets a team outside the
+    standings (a non-Division I opponent) is never in a conference game. NCAA
+    postseason games (season type 3) stay NULL.
+    """
+    if row["season_type"] != 2:
+        return None
+    home, away = conferences.get(row["home_team_id"]), conferences.get(row["away_team_id"])
+    if home is None and away is None:
+        return None
+    return home is not None and home == away
+
+
+def flatten_events(
+    events: Iterable[Any], conferences: Mapping[int, int] | None = None
+) -> list[dict[str, Any]]:
+    """Flatten scoreboard or schedule events into one row per game.
+
+    ``conferences`` (team id to conference id, from :func:`conference_index`)
+    fills ``conference_game`` when ESPN leaves it out, as team schedules do.
+    """
     rows: list[dict[str, Any]] = []
     seen: set[int] = set()
     for event in events:
@@ -572,6 +611,8 @@ def flatten_events(events: Iterable[Any]) -> list[dict[str, Any]]:
             row[f"{side}_rank"] = _rank(competitor)
             row[f"{side}_score"] = _score(competitor.get("score"))
             row[f"{side}_winner"] = to_bool(competitor.get("winner"))
+        if row["conference_game"] is None and conferences:
+            row["conference_game"] = _derived_conference_game(row, conferences)
         rows.append(row)
     return rows
 
@@ -594,7 +635,9 @@ ROSTER_SCHEMA = pa.schema(
         field("position", pa.string(), "Position abbreviation: G, F or C."),
         field("height_inches", pa.int32(), "Height in inches."),
         field("display_height", pa.string(), "Height as displayed, for example 6' 4\"."),
-        field("weight_lbs", pa.int32(), "Weight in pounds."),
+        field(
+            "weight_lbs", pa.int32(), "Weight in pounds; ESPN generally omits it (NULL) for women's rosters."
+        ),
         field("class_year", pa.string(), "Academic class abbreviation: FR, SO, JR or SR."),
         field("class_display", pa.string(), "Academic class name, for example Sophomore."),
         field("birth_city", pa.string(), "Hometown city."),
@@ -680,7 +723,6 @@ PLAYER_STATS_SCHEMA = pa.schema(
         field("fouls", pa.int32(), "Count of personal fouls committed."),
         field("double_doubles", pa.int32(), "Number of games with 10+ in two statistical categories."),
         field("triple_doubles", pa.int32(), "Number of games with 10+ in three statistical categories."),
-        field("player_efficiency_rating", pa.decimal128(7, 2), "ESPN player efficiency rating (PER)."),
     ]
 )
 
@@ -712,7 +754,6 @@ _PLAYER_STAT_MAP: dict[str, tuple[str, str, int | None]] = {
     "fouls": ("general", "fouls", None),
     "double_doubles": ("general", "doubleDouble", None),
     "triple_doubles": ("general", "tripleDouble", None),
-    "player_efficiency_rating": ("general", "PER", 2),
 }
 
 

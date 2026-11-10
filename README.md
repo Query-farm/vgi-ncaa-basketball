@@ -108,7 +108,8 @@ ORDER BY rank;
 `current_rankings` carries the AP Top 25 (`poll_id = 1`) and, where ESPN
 publishes it, the Coaches Poll (`poll_id = 2`). Teams that received votes but
 are outside the top 25 have `receiving_votes = true` and a `NULL` rank.
-`rankings()` takes `poll := 'Coaches'` for the coaches' poll. Early in a season
+`rankings()` takes `poll := 'Coaches'` for the coaches' poll; week 1 is the
+preseason poll. Early in a season
 the NCAA may still publish the previous season's final NET; the `updated`
 column says which release you have.
 
@@ -152,6 +153,9 @@ ORDER BY start_time;
 ```
 
 Find a `team_id` in `teams` (`WHERE display_name ILIKE '%duke%'`).
+ESPN's team schedule feed has no conference flag, so `team_schedule()` derives
+`conference_game` from that season's standings: conference-tournament games
+count, as on ESPN's scoreboard, and NCAA postseason games are `NULL`.
 `team_roster(team_id)` returns the current roster; ESPN does not reliably serve
 historical rosters, so it takes no season.
 

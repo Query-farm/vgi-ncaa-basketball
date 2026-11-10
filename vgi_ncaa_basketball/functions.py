@@ -63,7 +63,7 @@ class RankingsArgs:
             arrow_type=pa.int32(),
             ge=1,
             le=25,
-            doc="Regular-season poll week (1 is the first in-season poll).",
+            doc="Regular-season poll week (1 is the preseason poll).",
         ),
     ]
     poll: Annotated[
@@ -328,12 +328,15 @@ class _TeamSchedule(_LeagueFunction, TableFunctionGenerator[TeamScheduleArgs]):
         args = params.args
         regular = api.fetch_team_schedule(cls.LEAGUE, args.team_id, args.season, 2)
         post = api.fetch_team_schedule(cls.LEAGUE, args.team_id, args.season, 3)
+        # ESPN's team schedule omits conferenceCompetition; the same season's
+        # standings supply each team's conference so it can be derived.
+        standings = api.fetch_standings(cls.LEAGUE, args.season)
         events = [*(regular.payload.get("events") or []), *(post.payload.get("events") or [])]
         rows = sorted(
-            s.flatten_events(events),
+            s.flatten_events(events, s.conference_index(standings.payload)),
             key=lambda row: (row["start_time"] is None, row["start_time"] or 0),
         )
-        _emit(out, rows, params.output_schema, _min_age(regular.max_age, post.max_age))
+        _emit(out, rows, params.output_schema, _min_age(regular.max_age, post.max_age, standings.max_age))
 
 
 @init_single_worker
@@ -544,7 +547,7 @@ SPECS: tuple[Spec, ...] = (
         "rankings",
         "One row per team in a historical weekly poll: rank, previous rank, points, first-place "
         "votes and record, plus teams receiving votes (rank NULL). Seasons are labelled by end "
-        "year, so the 2025-26 season is 2026. Weeks start at 1 for the first in-season poll.",
+        "year, so the 2025-26 season is 2026. Week 1 is the preseason poll.",
         "Historical weekly poll from ESPN's core API. `poll` is `AP` (default) or `Coaches`. Teams "
         "outside the top 25 that received votes have `receiving_votes = true` and a NULL `rank`.",
         (
@@ -657,7 +660,10 @@ SPECS: tuple[Spec, ...] = (
         "games",
         "One row per game for team_id in a season (NULL for current), including conference "
         "tournament and NCAA tournament games, with scores once played. Find team_id in teams.",
-        "Regular season and postseason combined, ordered by tip-off time.",
+        "Regular season and postseason combined, ordered by tip-off time. ESPN's schedule feed omits "
+        "the conference flag, so `conference_game` is derived from the season's standings for "
+        "regular-season games (conference tournaments count, as on ESPN's scoreboard) and is NULL "
+        "for NCAA postseason games.",
         (
             (
                 "Duke's 2025-26 results.",
@@ -705,7 +711,7 @@ SPECS: tuple[Spec, ...] = (
         "{league} Division I player season statistics",
         "player-stats",
         "One row per Division I player for a season: games, minutes, points, rebounds, assists, "
-        "steals, blocks, shooting splits and percentages (0-100 scale), double-doubles and PER. "
+        "steals, blocks, shooting splits and percentages (0-100 scale), double-doubles and triple-doubles. "
         "Totals and per-game averages are both present. Filter games_played for qualified leaders.",
         "Complete per-athlete season lines from ESPN, fetched across every page. Percentages use a "
         "0-100 scale; per-game values are exact one-decimal numbers.",

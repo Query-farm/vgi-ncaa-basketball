@@ -70,7 +70,10 @@ def test_duke_2026_schedule() -> None:
         *(api.fetch_team_schedule(api.MENS, 150, 2026, 2).payload.get("events") or []),
         *(api.fetch_team_schedule(api.MENS, 150, 2026, 3).payload.get("events") or []),
     ]
-    rows = s.flatten_events(events)
+    conferences = s.conference_index(api.fetch_standings(api.MENS, 2026).payload)
+    rows = s.flatten_events(events, conferences)
+    # 18 ACC regular-season games plus three ACC tournament games, which ESPN flags as conference games.
+    assert sum(1 for row in rows if row["conference_game"]) == 21
     wins = sum(
         1
         for row in rows

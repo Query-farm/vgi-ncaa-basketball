@@ -159,8 +159,8 @@ def _table_specs(league: api.League) -> list[dict]:
                 "vgi.doc_llm": (
                     f"Current-season statistics for every {league.adjective} Division I player: totals "
                     "and per-game points, rebounds, assists, steals, blocks, shooting percentages "
-                    "(0-100 scale) and PER. Require a minimum games_played for leaderboards. For an "
-                    "earlier season call player_stats(season := ...)."
+                    "(0-100 scale), double-doubles and triple-doubles. Require a minimum games_played "
+                    "for leaderboards. For an earlier season call player_stats(season := ...)."
                 ),
                 "vgi.doc_md": "Complete current-season per-player lines from ESPN.",
                 "vgi.example_queries": _examples(

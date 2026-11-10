@@ -140,6 +140,19 @@ def test_schedule_events_use_score_objects() -> None:
     assert len(duplicated) == len(rows)
 
 
+def test_schedule_conference_game_is_derived_from_standings() -> None:
+    events = load("mens_schedule_150.json")["events"]
+    assert all(row["conference_game"] is None for row in s.flatten_events(events))
+    # 150 Duke and 349 Army share a conference here; 251 Texas is known, 2717 is outside Division I.
+    rows = s.flatten_events(events, {150: 2, 349: 2, 251: 8})
+    assert [row["conference_game"] for row in rows] == [False, False, True]
+    postseason = [event | {"seasonType": {"type": 3}} for event in events]
+    assert all(row["conference_game"] is None for row in s.flatten_events(postseason, {150: 2, 349: 2}))
+    assert s.flatten_events(events, {9999: 1})[0]["conference_game"] is None
+    index = s.conference_index(load("mens_standings.json"))
+    assert index[59] == 2 and index[213] == 7
+
+
 def test_roster() -> None:
     rows = s.flatten_roster(load("mens_roster_150.json"), 150)
     s.batch_from_rows(rows, s.ROSTER_SCHEMA)
