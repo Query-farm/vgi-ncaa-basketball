@@ -28,18 +28,18 @@ credentials and does not rehost or persist any dataset.
 
 ## Quick start
 
-Install the released worker with `uv`:
+The worker is not published to PyPI. `uvx` runs the tagged release straight from
+GitHub and caches it after the first use:
 
 ```bash
-uv tool install vgi-ncaa-basketball
-vgi-ncaa-basketball
+uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball --help
 ```
 
 Launch Haybarn with the catalog pre-attached:
 
 ```bash
 uvx haybarn-cli \
-  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ncaa_basketball' (TYPE vgi, LOCATION 'vgi-ncaa-basketball');" \
+  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ncaa_basketball' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball');" \
   :memory:
 ```
 
@@ -50,7 +50,7 @@ INSTALL vgi FROM community;
 LOAD vgi;
 ATTACH 'ncaa_basketball' (
   TYPE vgi,
-  LOCATION 'vgi-ncaa-basketball'
+  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball'
 );
 ```
 
@@ -264,7 +264,7 @@ or an explicit anonymous-access decision:
 export VGI_SIGNING_KEY='a-long-random-secret-shared-by-every-replica'
 export VGI_BEARER_TOKENS='replace-with-a-random-token=haybarn'
 
-vgi-ncaa-basketball-http \
+uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball-http \
   --host 0.0.0.0 \
   --port 8000 \
   --cors-origins 'https://sql.example.com' \
@@ -342,10 +342,12 @@ The offline suite parses recorded ESPN and ncaa-api responses in
 `tests/fixtures` and runs a hermetic Haybarn end-to-end test against a local
 fixture server. Live upstream smoke tests are opt-in with
 `uv run pytest -m live` and also run in a serialized scheduled workflow
-alongside the executing VGI lint of every catalog example. Publishing is
-release-driven: create a GitHub release named `vX.Y.Z` matching the version in
-`pyproject.toml`. CI builds, attests, validates, and publishes the
-distributions through PyPI trusted publishing.
+alongside the executing VGI lint of every catalog example. Publishing is driven by releases. Create a GitHub release named `vX.Y.Z` that
+matches the version in `pyproject.toml`. CI then builds, validates and attests
+the wheel and sdist, attaches them to the release, and publishes a
+multi-platform container image to `ghcr.io/query-farm/vgi-ncaa-basketball`. The package is
+not published to PyPI; install it from the release tag as shown in the quick
+start.
 
 ## License
 
