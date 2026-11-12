@@ -32,14 +32,14 @@ The worker is not published to PyPI. `uvx` runs the tagged release straight from
 GitHub and caches it after the first use:
 
 ```bash
-uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball --help
+uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.2.0 vgi-ncaa-basketball --help
 ```
 
 Launch Haybarn with the catalog pre-attached:
 
 ```bash
 uvx haybarn-cli \
-  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ncaa_basketball' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball');" \
+  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ncaa_basketball' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.2.0 vgi-ncaa-basketball');" \
   :memory:
 ```
 
@@ -50,7 +50,7 @@ INSTALL vgi FROM community;
 LOAD vgi;
 ATTACH 'ncaa_basketball' (
   TYPE vgi,
-  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball'
+  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.2.0 vgi-ncaa-basketball'
 );
 ```
 
@@ -264,7 +264,7 @@ or an explicit anonymous-access decision:
 export VGI_SIGNING_KEY='a-long-random-secret-shared-by-every-replica'
 export VGI_BEARER_TOKENS='replace-with-a-random-token=haybarn'
 
-uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.1.0 vgi-ncaa-basketball-http \
+uvx --from git+https://github.com/Query-farm/vgi-ncaa-basketball@v0.2.0 vgi-ncaa-basketball-http \
   --host 0.0.0.0 \
   --port 8000 \
   --cors-origins 'https://sql.example.com' \
