@@ -12,7 +12,7 @@ from vgi.catalog import Catalog, ConstraintInfo, Schema, Table, constraint_recor
 
 from vgi_ncaa_basketball import api
 from vgi_ncaa_basketball import schemas as s
-from vgi_ncaa_basketball.functions import CATALOG, build_functions
+from vgi_ncaa_basketball.functions import CATALOG, COMPOSED_EXAMPLES, build_functions, league_examples
 from vgi_ncaa_basketball.meta import column_comments
 
 SOURCE_URL = "https://github.com/Query-farm/vgi-ncaa-basketball"
@@ -390,6 +390,7 @@ def _schema(league: api.League) -> Schema:
                     f"SELECT team_name, conference_name, conference_wins, conference_losses "
                     f"FROM {q}.current_standings ORDER BY conference_win_percentage DESC NULLS LAST LIMIT 10",
                 ),
+                *((item["description"], item["sql"]) for item in league_examples(league, COMPOSED_EXAMPLES)),
             ),
         },
         functions=list(functions.values()),

@@ -46,6 +46,11 @@ QUERY_TIMEOUT = 120.0
 MAX_CONCURRENT_REQUESTS = 4
 # The public ncaa-api host allows 3 requests per second per IP.
 NCAA_MIN_INTERVAL = 0.35
+# Under bursts (several workers or clients sharing one IP) ncaa-api's CDN shield answers
+# HTTP 428 with an HTML page instead of 429. It clears after a short cooldown, so it is
+# retried for ncaa-api only, with a longer backoff than ordinary transient errors.
+NCAA_SHIELD_STATUS = 428
+NCAA_SHIELD_BASE_DELAY = 2.0
 MAX_CACHE_ENTRIES = 96
 PLAYER_PAGE_SIZE = 1_000
 MAX_PLAYER_PAGES = 20
@@ -178,7 +183,7 @@ def _headers(source: str) -> dict[str, str]:
 
 
 def _request(source: str, path: str, params: Mapping[str, str | int], *, deadline: float) -> httpx.Response:
-    """Issue one GET, retrying transport failures, 429 and transient 5xx responses."""
+    """Issue one GET, retrying transport failures, 429, transient 5xx and ncaa-api's shield 428."""
     url = f"{base_url(source)}/{path.lstrip('/')}"
     client = _shared_client()
     for attempt in range(MAX_ATTEMPTS):
@@ -223,9 +228,14 @@ def _request(source: str, path: str, params: Mapping[str, str | int], *, deadlin
             attempt + 1,
             round((time.monotonic() - started) * 1_000),
         )
-        if response.status_code not in RETRYABLE_STATUSES or attempt + 1 == MAX_ATTEMPTS:
+        shielded = source == "ncaa" and response.status_code == NCAA_SHIELD_STATUS
+        retryable = shielded or response.status_code in RETRYABLE_STATUSES
+        if not retryable or attempt + 1 == MAX_ATTEMPTS:
             return response
-        delay = min(_retry_delay(response, attempt), max(0.0, deadline - time.monotonic()))
+        delay = _retry_delay(response, attempt)
+        if shielded:
+            delay = max(delay, min(NCAA_SHIELD_BASE_DELAY * 2**attempt, MAX_RETRY_DELAY))
+        delay = min(delay, max(0.0, deadline - time.monotonic()))
         logger.warning(
             "upstream_retry source=%s path=%s status=%d attempt=%d delay_seconds=%.3f",
             source,

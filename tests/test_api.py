@@ -81,6 +81,29 @@ def test_retries_429_then_succeeds(mock) -> None:
     assert len(seen) == 3
 
 
+def test_ncaa_api_shield_428_is_retried_with_backoff(mock, monkeypatch: pytest.MonkeyPatch) -> None:
+    seen, responses = mock
+    delays: list[float] = []
+    monkeypatch.setattr(api.time, "sleep", delays.append)
+    responses.extend(
+        [
+            httpx.Response(428, text="<html><head><title>428 Precondition Required</title>"),
+            httpx.Response(200, json={"data": []}),
+        ]
+    )
+    assert api.fetch_net_rankings(api.WOMENS).payload == {"data": []}
+    assert len(seen) == 2
+    assert api.NCAA_SHIELD_BASE_DELAY in delays
+
+
+def test_espn_428_is_not_retried(mock) -> None:
+    seen, responses = mock
+    responses.append(httpx.Response(428, text="precondition required"))
+    with pytest.raises(api.UpstreamError, match="ESPN returned HTTP 428"):
+        api.fetch_standings(api.MENS, 2026)
+    assert len(seen) == 1
+
+
 def test_retry_exhaustion_raises_descriptive_error(mock) -> None:
     seen, responses = mock
     responses.append(httpx.Response(502, text="bad gateway"))

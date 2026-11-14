@@ -66,6 +66,18 @@ def test_schema_surface(schema) -> None:
             assert f"ncaa_basketball.{schema.path[0]}.{table.name}" in example["sql"]
 
 
+@pytest.mark.parametrize("schema", NCAA_CATALOG.schemas, ids=lambda value: value.path[0])
+def test_schema_examples_include_composed_queries(schema) -> None:
+    from vgi_ncaa_basketball import api
+    from vgi_ncaa_basketball.functions import COMPOSED_EXAMPLES, league_examples
+
+    league = next(league for league in api.LEAGUES if league.key == schema.path[0])
+    raw = schema.tags["vgi.example_queries"]
+    examples = json.loads(raw)
+    assert all(item in examples for item in league_examples(league, COMPOSED_EXAMPLES))
+    assert len(raw) <= 8000  # vgi-lint VGI417 cap for vgi.example_queries
+
+
 def test_required_and_optional_arguments() -> None:
     functions = {function.Meta.name: function for function in NCAA_CATALOG.schemas[0].functions}
     expectations = {

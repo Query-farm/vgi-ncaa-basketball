@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+import re
 from datetime import date
 from types import SimpleNamespace
 from typing import Any
@@ -139,6 +141,33 @@ def test_examples_use_each_leagues_pinned_ids() -> None:
     assert "box_score(401918925)" in WOMENS["box_score"].Meta.tags["vgi.example_queries"]
     assert "stat_leaders(102)" in WOMENS["stat_leaders"].Meta.tags["vgi.example_queries"]
     assert "{" not in WOMENS["stat_leaders"].Meta.tags["vgi.doc_llm"]
+
+
+@pytest.mark.parametrize("league_functions", [MENS, WOMENS], ids=["mens", "womens"])
+def test_example_descriptions_resolve_pinned_tokens(league_functions: dict[str, Any]) -> None:
+    # Descriptions such as "Top scorers in {game}" once shipped with the token unresolved.
+    for cls in league_functions.values():
+        for example in json.loads(cls.Meta.tags["vgi.example_queries"]):
+            assert not re.search(r"\{(s|event|game|ppg)\}", example["description"] + example["sql"]), example
+    assert "Wagner at UConn" in MENS["box_score"].Meta.tags["vgi.example_queries"]
+    assert "Bradley at Indiana" in WOMENS["box_score"].Meta.tags["vgi.example_queries"]
+
+
+@pytest.mark.parametrize(
+    ("example", "driver"),
+    [
+        (functions.SCHEDULE_VS_OPPONENT_RECORDS, "team_schedule"),
+        (functions.SCORING_BY_PERIOD, "play_by_play"),
+        (functions.LEADERS_WITH_NET, "stat_leaders"),
+        (functions.ELITE_EIGHT_PRESEASON_RANK, "bracket"),
+    ],
+)
+def test_composed_examples_lead_their_driving_function(example: tuple[str, str], driver: str) -> None:
+    for league, league_functions in ((api.MENS, MENS), (api.WOMENS, WOMENS)):
+        expected = functions.league_examples(league, (example,))[0]
+        examples = json.loads(league_functions[driver].Meta.tags["vgi.example_queries"])
+        # The vgi-lint agent simulator shows only the first five examples of each object.
+        assert expected in examples[:5]
 
 
 def test_ncaa_api_functions(upstream: str) -> None:

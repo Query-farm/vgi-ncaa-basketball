@@ -524,6 +524,65 @@ def _q(league: api.League, text: str) -> str:
     return text
 
 
+# Composed examples: each combines two of the worker's own functions in one query. Every SQL is
+# defined once here and referenced from the example list of the function that drives it and from
+# the schema-level list (worker._schema), so the two cannot drift apart.
+SCHEDULE_VS_OPPONENT_RECORDS = (
+    "Duke's 2025-26 results beside each opponent's final overall record (team_schedule joined to "
+    "standings on the opponent's team_id).",
+    "WITH games AS (SELECT start_time, "
+    "CASE WHEN home_team_id = 150 THEN away_team_id ELSE home_team_id END AS opponent_id, "
+    "CASE WHEN home_team_id = 150 THEN home_score ELSE away_score END AS duke_score, "
+    "CASE WHEN home_team_id = 150 THEN away_score ELSE home_score END AS opponent_score "
+    "FROM {s}.team_schedule(150, season := 2026)) "
+    "SELECT g.start_time, s.team_name AS opponent, g.duke_score, g.opponent_score, "
+    "s.wins AS opponent_wins, s.losses AS opponent_losses "
+    "FROM games g LEFT JOIN {s}.standings(season := 2026) s ON s.team_id = g.opponent_id "
+    "ORDER BY g.start_time",
+)
+SCORING_BY_PERIOD = (
+    "Each scorer's points per period in {game}, summed from play_by_play scoring plays and shown "
+    "beside the player's box_score total.",
+    "SELECT b.team_abbreviation, b.player_name, p.period, sum(p.score_value) AS period_points, "
+    "b.points AS game_points "
+    "FROM {s}.play_by_play({event}) p JOIN {s}.box_score({event}) b USING (player_id) "
+    "WHERE p.scoring_play "
+    "GROUP BY b.team_abbreviation, b.player_name, b.points, p.period "
+    "ORDER BY b.team_abbreviation, game_points DESC, b.player_name, p.period",
+)
+LEADERS_WITH_NET = (
+    "The official NCAA points-per-game top ten (ties included) with each player's school in the "
+    "latest NET (stat_leaders joined to net_rankings on the NCAA school name).",
+    "SELECT l.rank, l.player_name, l.team, l.stat_value, n.rank AS net_rank, n.record "
+    "FROM {s}.stat_leaders({ppg}) l LEFT JOIN {s}.net_rankings n ON n.school = l.team "
+    "WHERE l.rank <= 10 ORDER BY l.rank, l.player_name",
+)
+ELITE_EIGHT_PRESEASON_RANK = (
+    "How far each 2026 Elite Eight team went in the NCAA tournament and where it sat in the "
+    "preseason AP poll (NULL when unranked).",
+    "WITH slots AS (SELECT round_number, round_title, unnest([top_team, bottom_team]) AS team "
+    "FROM {s}.bracket(2026)), "
+    "reached AS (SELECT team, max(round_number) AS furthest_round, "
+    "arg_max(round_title, round_number) AS furthest_round_title FROM slots GROUP BY team) "
+    "SELECT r.team, r.furthest_round_title, p.rank AS preseason_ap_rank "
+    "FROM reached r LEFT JOIN {s}.rankings(2026, 1) p "
+    "ON p.team_location = r.team AND p.rank IS NOT NULL "
+    "WHERE r.furthest_round >= 5 "
+    "ORDER BY r.furthest_round DESC, preseason_ap_rank NULLS LAST, r.team",
+)
+COMPOSED_EXAMPLES: tuple[tuple[str, str], ...] = (
+    SCHEDULE_VS_OPPONENT_RECORDS,
+    SCORING_BY_PERIOD,
+    LEADERS_WITH_NET,
+    ELITE_EIGHT_PRESEASON_RANK,
+)
+
+
+def league_examples(league: api.League, items: tuple[tuple[str, str], ...]) -> list[dict[str, str]]:
+    """Resolve catalog and pinned-value tokens in (description, sql) example pairs for one league."""
+    return [{"description": _q(league, text), "sql": _q(league, sql)} for text, sql in items]
+
+
 SPECS: tuple[Spec, ...] = (
     Spec(
         _CurrentRankings,
@@ -670,6 +729,7 @@ SPECS: tuple[Spec, ...] = (
                 "SELECT start_time, short_name, away_score, home_score, status "
                 "FROM {s}.team_schedule(150, season := 2026) ORDER BY start_time",
             ),
+            SCHEDULE_VS_OPPONENT_RECORDS,
         ),
     ),
     Spec(
@@ -771,6 +831,7 @@ SPECS: tuple[Spec, ...] = (
                 "SELECT period, clock, text, home_score, away_score FROM {s}.play_by_play({event}) "
                 "WHERE scoring_play ORDER BY sequence_number",
             ),
+            SCORING_BY_PERIOD,
         ),
     ),
     Spec(
@@ -803,6 +864,7 @@ SPECS: tuple[Spec, ...] = (
                 "The NCAA's official points-per-game leaders.",
                 "SELECT rank, player_name, team, stat_value FROM {s}.stat_leaders({ppg}) ORDER BY rank",
             ),
+            LEADERS_WITH_NET,
         ),
     ),
     Spec(
@@ -833,13 +895,14 @@ SPECS: tuple[Spec, ...] = (
                 "SELECT round_title, top_seed, top_team, top_score, bottom_seed, bottom_team, "
                 "bottom_score FROM {s}.bracket(2026) WHERE round_number >= 6 ORDER BY bracket_position_id",
             ),
+            ELITE_EIGHT_PRESEASON_RANK,
         ),
     ),
 )
 
 
 def _meta(spec: Spec, league: api.League) -> type:
-    examples = [{"description": text, "sql": _q(league, sql)} for text, sql in spec.examples]
+    examples = league_examples(league, spec.examples)
     league_label = f"NCAA {league.adjective} basketball"
     description = spec.description.format(league=league_label)
     tags = {

@@ -4,6 +4,16 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+- Add composed example queries that combine two of the worker's functions:
+  `team_schedule` with `standings`, `play_by_play` with `box_score`,
+  `stat_leaders` with `net_rankings`, and `bracket` with `rankings`. Each sits on
+  the driving function and in the schema-level examples; the README gains the
+  play-by-play/box-score one.
+- Fix example descriptions that showed unresolved `{game}` placeholders
+  (box_score, team_box_score and play_by_play).
+- Retry ncaa-api's CDN-shield HTTP 428 (sent under request bursts) with a
+  2-second-and-up backoff instead of failing the query; ESPN 428s still fail.
+
 ## [0.2.0]
 
 - Port to VGI protocol 3.3 (vgi-python 0.51). Requires the current VGI DuckDB

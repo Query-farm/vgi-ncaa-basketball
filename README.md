@@ -201,6 +201,15 @@ SELECT period, clock, text, home_score, away_score
 FROM ncaa_basketball.mens.play_by_play(401920686)
 WHERE scoring_play
 ORDER BY sequence_number;
+
+-- Each scorer's points per period, from play-by-play, beside the box-score total
+SELECT b.team_abbreviation, b.player_name, p.period,
+       sum(p.score_value) AS period_points, b.points AS game_points
+FROM ncaa_basketball.mens.play_by_play(401920686) p
+JOIN ncaa_basketball.mens.box_score(401920686) b USING (player_id)
+WHERE p.scoring_play
+GROUP BY b.team_abbreviation, b.player_name, b.points, p.period
+ORDER BY b.team_abbreviation, game_points DESC, b.player_name, p.period;
 ```
 
 Event ids come from `scoreboard()`, `current_scoreboard` or `team_schedule()`.
