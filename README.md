@@ -365,3 +365,7 @@ Copyright 2026 Query Farm LLC - https://query.farm
 The worker's source code is released under the [MIT License](LICENSE). Data
 retrieved through it remains the property of its providers and is subject to
 their terms.
+
+## Executed notebook
+
+[Reconcile player score coverage](notebooks/README.md) compares retained player rows with reported team scores, using an explicit replay fixture and optional live ESPN mode.
