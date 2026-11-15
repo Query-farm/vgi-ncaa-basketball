@@ -543,7 +543,15 @@ NCAA_CATALOG = Catalog(
             "Current tables are the quickest entry point. Parameterized functions select seasons, "
             "weeks, dates, teams and games. ESPN `team_id` and `event_id` link standings, scoreboards, "
             "schedules, rosters and box scores. Seasons are labelled by their ending year.\n\n"
-            "Data is fetched on demand and cached briefly in process; nothing is rehosted."
+            "Data is fetched on demand and cached briefly in process; nothing is rehosted.\n\n"
+            "## Sources and references\n\n"
+            "* ESPN [men's](https://www.espn.com/mens-college-basketball/) and "
+            "[women's](https://www.espn.com/womens-college-basketball/) college basketball: polls, "
+            "standings, scoreboards, rosters, statistics and box scores.\n"
+            "* [NCAA.com](https://www.ncaa.com/): the official [NET "
+            "rankings](https://www.ncaa.com/rankings/basketball-men/d1/ncaa-mens-basketball-net-rankings), "
+            "stat leaders and brackets, read through [ncaa-api](https://github.com/henrygd/ncaa-api).\n"
+            "* [Disney Terms of Use](https://disneytermsofuse.com/): the terms that govern ESPN's data."
         ),
     },
     schemas=[_schema(league) for league in api.LEAGUES],

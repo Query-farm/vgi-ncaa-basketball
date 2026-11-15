@@ -4,6 +4,11 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.1]
+
+- Docs link to ESPN college basketball, NCAA.com, ncaa-api and ESPN's terms: the
+  catalog's documentation gains a Sources and references section (vgi-lint
+  VGI183).
 - Add composed example queries that combine two of the worker's functions:
   `team_schedule` with `standings`, `play_by_play` with `box_score`,
   `stat_leaders` with `net_rankings`, and `bracket` with `rankings`. Each sits on
