@@ -1,0 +1,112 @@
+# name: test/sql/ncaa_basketball.test
+# description: Hermetic end-to-end coverage: every table in both schemas, served from
+#   tests/fixtures by test/mock_api/server.py (see ci/run-integration.sh).
+# group: [ncaa_basketball]
+
+require vgi
+
+require-env VGI_NCAA_BASKETBALL_WORKER
+
+require-env NCAAB_ESPN_SITE_URL
+
+statement ok
+ATTACH 'ncaa_basketball' (TYPE vgi, LOCATION '{VGI_NCAA_BASKETBALL_WORKER}');
+
+# Rows each table yields from the recorded fixtures, per schema.
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.current_rankings;
+----
+14
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.current_standings;
+----
+8
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.current_scoreboard;
+----
+3
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.current_player_stats;
+----
+3
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.teams;
+----
+12
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.conferences;
+----
+2
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.net_rankings;
+----
+5
+
+query I
+SELECT count(*) FROM ncaa_basketball.mens.stat_categories;
+----
+11
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.current_rankings;
+----
+7
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.current_standings;
+----
+8
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.current_scoreboard;
+----
+3
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.current_player_stats;
+----
+3
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.teams;
+----
+12
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.conferences;
+----
+2
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.net_rankings;
+----
+5
+
+query I
+SELECT count(*) FROM ncaa_basketball.womens.stat_categories;
+----
+11
+
+# Same-named objects in the two schemas must dispatch (and cache) separately.
+query TT
+SELECT (SELECT string_agg(DISTINCT conference_abbreviation, '|' ORDER BY conference_abbreviation) FROM ncaa_basketball.mens.current_standings), (SELECT string_agg(DISTINCT conference_abbreviation, '|' ORDER BY conference_abbreviation) FROM ncaa_basketball.womens.current_standings);
+----
+acc|big10	big10|sec
+
+# The trimmed fixture keeps four UConn players: 11 + 12 + 10 + 10 points.
+query I
+SELECT sum(points) FROM ncaa_basketball.mens.box_score(401920686) WHERE team_id = 41;
+----
+43
+
+query T
+SELECT winner FROM ncaa_basketball.womens.bracket(2026) WHERE round_number = 7;
+----
+UCLA
